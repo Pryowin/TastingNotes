@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829B1F34114000FB0E6C /* AppDelegate.swift */; };
+		FDC1829E1F34114000FB0E6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* ViewController.swift */; };
+		FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC1829F1F34114000FB0E6C /* Main.storyboard */; };
+		FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */; };
+		FDC182A61F34114000FB0E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC182A51F34114000FB0E6C /* Assets.xcassets */; };
+		FDC182A91F34114000FB0E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */; };
+		FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */; };
+		FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDC182B01F34114000FB0E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDC182901F34113F00FB0E6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC182971F34113F00FB0E6C;
+			remoteInfo = TastingNotes;
+		};
+		FDC182BB1F34114000FB0E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDC182901F34113F00FB0E6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDC182971F34113F00FB0E6C;
+			remoteInfo = TastingNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDC182981F34113F00FB0E6C /* TastingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC1829B1F34114000FB0E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDC1829D1F34114000FB0E6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDC182A01F34114000FB0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDC182A31F34114000FB0E6C /* TastingNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TastingNotes.xcdatamodel; sourceTree = "<group>"; };
+		FDC182A51F34114000FB0E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDC182A81F34114000FB0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDC182AA1F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC182AF1F34114000FB0E6C /* TastingNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TastingNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNotesTests.swift; sourceTree = "<group>"; };
+		FDC182B51F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC182BA1F34114000FB0E6C /* TastingNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TastingNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNotesUITests.swift; sourceTree = "<group>"; };
+		FDC182C01F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDC182951F34113F00FB0E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC182AC1F34114000FB0E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC182B71F34114000FB0E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDC1828F1F34113F00FB0E6C = {
+			isa = PBXGroup;
+			children = (
+				FDC1829A1F34113F00FB0E6C /* TastingNotes */,
+				FDC182B21F34114000FB0E6C /* TastingNotesTests */,
+				FDC182BD1F34114000FB0E6C /* TastingNotesUITests */,
+				FDC182991F34113F00FB0E6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDC182991F34113F00FB0E6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDC182981F34113F00FB0E6C /* TastingNotes.app */,
+				FDC182AF1F34114000FB0E6C /* TastingNotesTests.xctest */,
+				FDC182BA1F34114000FB0E6C /* TastingNotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDC1829A1F34113F00FB0E6C /* TastingNotes */ = {
+			isa = PBXGroup;
+			children = (
+				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
+				FDC1829D1F34114000FB0E6C /* ViewController.swift */,
+				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
+				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
+				FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */,
+				FDC182AA1F34114000FB0E6C /* Info.plist */,
+				FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */,
+			);
+			path = TastingNotes;
+			sourceTree = "<group>";
+		};
+		FDC182B21F34114000FB0E6C /* TastingNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */,
+				FDC182B51F34114000FB0E6C /* Info.plist */,
+			);
+			path = TastingNotesTests;
+			sourceTree = "<group>";
+		};
+		FDC182BD1F34114000FB0E6C /* TastingNotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */,
+				FDC182C01F34114000FB0E6C /* Info.plist */,
+			);
+			path = TastingNotesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDC182971F34113F00FB0E6C /* TastingNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC182C31F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotes" */;
+			buildPhases = (
+				FDC182941F34113F00FB0E6C /* Sources */,
+				FDC182951F34113F00FB0E6C /* Frameworks */,
+				FDC182961F34113F00FB0E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TastingNotes;
+			productName = TastingNotes;
+			productReference = FDC182981F34113F00FB0E6C /* TastingNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDC182AE1F34114000FB0E6C /* TastingNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC182C61F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotesTests" */;
+			buildPhases = (
+				FDC182AB1F34114000FB0E6C /* Sources */,
+				FDC182AC1F34114000FB0E6C /* Frameworks */,
+				FDC182AD1F34114000FB0E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDC182B11F34114000FB0E6C /* PBXTargetDependency */,
+			);
+			name = TastingNotesTests;
+			productName = TastingNotesTests;
+			productReference = FDC182AF1F34114000FB0E6C /* TastingNotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDC182B91F34114000FB0E6C /* TastingNotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC182C91F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotesUITests" */;
+			buildPhases = (
+				FDC182B61F34114000FB0E6C /* Sources */,
+				FDC182B71F34114000FB0E6C /* Frameworks */,
+				FDC182B81F34114000FB0E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDC182BC1F34114000FB0E6C /* PBXTargetDependency */,
+			);
+			name = TastingNotesUITests;
+			productName = TastingNotesUITests;
+			productReference = FDC182BA1F34114000FB0E6C /* TastingNotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDC182901F34113F00FB0E6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = amberfire;
+				TargetAttributes = {
+					FDC182971F34113F00FB0E6C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					FDC182AE1F34114000FB0E6C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDC182971F34113F00FB0E6C;
+					};
+					FDC182B91F34114000FB0E6C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FDC182971F34113F00FB0E6C;
+					};
+				};
+			};
+			buildConfigurationList = FDC182931F34113F00FB0E6C /* Build configuration list for PBXProject "TastingNotes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDC1828F1F34113F00FB0E6C;
+			productRefGroup = FDC182991F34113F00FB0E6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDC182971F34113F00FB0E6C /* TastingNotes */,
+				FDC182AE1F34114000FB0E6C /* TastingNotesTests */,
+				FDC182B91F34114000FB0E6C /* TastingNotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDC182961F34113F00FB0E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC182A91F34114000FB0E6C /* LaunchScreen.storyboard in Resources */,
+				FDC182A61F34114000FB0E6C /* Assets.xcassets in Resources */,
+				FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC182AD1F34114000FB0E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC182B81F34114000FB0E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDC182941F34113F00FB0E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */,
+				FDC1829E1F34114000FB0E6C /* ViewController.swift in Sources */,
+				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC182AB1F34114000FB0E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC182B61F34114000FB0E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDC182B11F34114000FB0E6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC182971F34113F00FB0E6C /* TastingNotes */;
+			targetProxy = FDC182B01F34114000FB0E6C /* PBXContainerItemProxy */;
+		};
+		FDC182BC1F34114000FB0E6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDC182971F34113F00FB0E6C /* TastingNotes */;
+			targetProxy = FDC182BB1F34114000FB0E6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDC1829F1F34114000FB0E6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC182A01F34114000FB0E6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC182A81F34114000FB0E6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDC182C11F34114000FB0E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDC182C21F34114000FB0E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDC182C41F34114000FB0E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TastingNotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FDC182C51F34114000FB0E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TastingNotes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FDC182C71F34114000FB0E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TastingNotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TastingNotes.app/TastingNotes";
+			};
+			name = Debug;
+		};
+		FDC182C81F34114000FB0E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TastingNotesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TastingNotes.app/TastingNotes";
+			};
+			name = Release;
+		};
+		FDC182CA1F34114000FB0E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TastingNotesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TastingNotes;
+			};
+			name = Debug;
+		};
+		FDC182CB1F34114000FB0E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TastingNotesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TastingNotes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDC182931F34113F00FB0E6C /* Build configuration list for PBXProject "TastingNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC182C11F34114000FB0E6C /* Debug */,
+				FDC182C21F34114000FB0E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDC182C31F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC182C41F34114000FB0E6C /* Debug */,
+				FDC182C51F34114000FB0E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FDC182C61F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC182C71F34114000FB0E6C /* Debug */,
+				FDC182C81F34114000FB0E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FDC182C91F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDC182CA1F34114000FB0E6C /* Debug */,
+				FDC182CB1F34114000FB0E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FDC182A31F34114000FB0E6C /* TastingNotes.xcdatamodel */,
+			);
+			currentVersion = FDC182A31F34114000FB0E6C /* TastingNotes.xcdatamodel */;
+			path = TastingNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FDC182901F34113F00FB0E6C /* Project object */;
+}
