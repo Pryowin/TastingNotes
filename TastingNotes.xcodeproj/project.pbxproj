@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829B1F34114000FB0E6C /* AppDelegate.swift */; };
-		FDC1829E1F34114000FB0E6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* ViewController.swift */; };
+		FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */; };
 		FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC1829F1F34114000FB0E6C /* Main.storyboard */; };
 		FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */; };
 		FDC182A61F34114000FB0E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDC182A51F34114000FB0E6C /* Assets.xcassets */; };
 		FDC182A91F34114000FB0E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */; };
 		FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */; };
 		FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */; };
+		FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */; };
+		FDC182E11F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DF1F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		FDC182981F34113F00FB0E6C /* TastingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1829B1F34114000FB0E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDC1829D1F34114000FB0E6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSessionsVC.swift; sourceTree = "<group>"; };
 		FDC182A01F34114000FB0E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDC182A31F34114000FB0E6C /* TastingNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TastingNotes.xcdatamodel; sourceTree = "<group>"; };
 		FDC182A51F34114000FB0E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		FDC182BA1F34114000FB0E6C /* TastingNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TastingNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNotesUITests.swift; sourceTree = "<group>"; };
 		FDC182C01F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDC182DF1F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
-				FDC1829D1F34114000FB0E6C /* ViewController.swift */,
+				FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */,
 				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
-				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
 				FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */,
 				FDC182AA1F34114000FB0E6C /* Info.plist */,
+				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
+				FDC182DF1F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift */,
+				FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */,
 				FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */,
 			);
 			path = TastingNotes;
@@ -263,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */,
-				FDC1829E1F34114000FB0E6C /* ViewController.swift in Sources */,
+				FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */,
+				FDC182E11F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
+				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +519,7 @@
 				FDC182C51F34114000FB0E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDC182C61F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotesTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +528,7 @@
 				FDC182C81F34114000FB0E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDC182C91F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +537,7 @@
 				FDC182CB1F34114000FB0E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
