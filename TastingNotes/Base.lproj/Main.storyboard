@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sessions-->
+        <!--Tasting Sessions-->
         <scene sceneID="lCm-Da-Gxh">
             <objects>
                 <tableViewController id="0vq-qh-ZoI" customClass="TastingSessionsVC" customModule="TastingNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,13 @@
                             <outlet property="delegate" destination="0vq-qh-ZoI" id="mhf-6m-4Mh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sessions" prompt="" id="Hmh-Nz-AtY"/>
+                    <navigationItem key="navigationItem" title="Tasting Sessions" id="mlX-i8-9cc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zIa-Dd-Ok4">
+                            <connections>
+                                <action selector="addSesison:" destination="0vq-qh-ZoI" id="dVJ-Wo-59x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ks9-YQ-J95" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
