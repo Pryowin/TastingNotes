@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD39EDA41F37738B00FE50D3 /* TastingSessionFRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionFRC.swift */; };
+		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829B1F34114000FB0E6C /* AppDelegate.swift */; };
 		FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */; };
 		FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC1829F1F34114000FB0E6C /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		FD39EDA31F37738B00FE50D3 /* TastingSessionFRC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionFRC.swift; sourceTree = "<group>"; };
+		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FDC182981F34113F00FB0E6C /* TastingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1829B1F34114000FB0E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSessionsVC.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
+				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */,
 				FD39EDA31F37738B00FE50D3 /* TastingSessionFRC.swift */,
 				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
@@ -277,6 +280,7 @@
 				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
 				FD39EDA41F37738B00FE50D3 /* TastingSessionFRC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
+				FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

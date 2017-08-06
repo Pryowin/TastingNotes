@@ -13,9 +13,8 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - Variables
    
-    
     var fetchedResultsController: NSFetchedResultsController<TastingSession>!
-    
+    var dateFormatter: DateFormatter!
     
     // MARK: - Outlets and Actions
     
@@ -31,18 +30,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         } catch let error {
             fatalError("Unable to save \(error)")
         }
-        
     }
-    
-    // MARK: - Functions
-    
-       let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        return formatter
-    }()
-    
     
     // MARK: - View Overrides
     
@@ -79,7 +67,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         cell.detailTextLabel?.text = dateFormatter.string(from: date!)
 
         return cell
-
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -92,7 +79,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
             } catch let error {
                 fatalError("Unable to save \(error)")
             }
-           
         }
     }
     
@@ -112,6 +98,5 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
             break;
         }
     }
-
 }
 
