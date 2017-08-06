@@ -16,21 +16,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     var fetchedResultsController: NSFetchedResultsController<TastingSession>!
     var dateFormatter: DateFormatter!
     
-    // MARK: - Outlets and Actions
-    
-    @IBAction func addSesison(_ sender: UIBarButtonItem) {
-        let context = fetchedResultsController.managedObjectContext
-        let session = TastingSession(context: context)
-        
-        session.sessionDate = Date() as NSDate
-        let randomSession = arc4random() % 9
-        session.sessionName = "Session \(randomSession)"
-        do {
-            try context.save()
-        } catch let error {
-            fatalError("Unable to save \(error)")
-        }
-    }
     
     // MARK: - View Overrides
     
@@ -43,6 +28,19 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navController = segue.destination as! UINavigationController
+        switch segue.identifier{
+        case "showSessionDetails"?:
+            let sessionDetailController = navController.topViewController as! TastingSessionDetailsVC
+            sessionDetailController.dateString = dateFormatter.string(from: Date())
+            sessionDetailController.dateSessionCreated = Date()
+            sessionDetailController.fetchedResultsController = fetchedResultsController
+        default:
+            preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
+        }
     }
     
     

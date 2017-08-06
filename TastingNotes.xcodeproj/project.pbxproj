@@ -110,10 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
-				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */,
-				FD39EDA31F37738B00FE50D3 /* TastingSessionFRC.swift */,
 				FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */,
+				FD39EDA31F37738B00FE50D3 /* TastingSessionFRC.swift */,
+				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
 				FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */,
 				FDC182AA1F34114000FB0E6C /* Info.plist */,
