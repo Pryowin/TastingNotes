@@ -16,15 +16,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     var fetchedResultsController: NSFetchedResultsController<TastingSession>!
     
-    let persitentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "TastingNotes")
-        container.loadPersistentStores {(description, error) in
-            if let error = error {
-                print("Error in setting up Core Data /(error)")
-            }
-        }
-        return container
-    } ()
     
     // MARK: - Outlets and Actions
     
@@ -45,30 +36,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - Functions
     
-    func initFetchedResultsController() {
-        
-        let request: NSFetchRequest<TastingSession> = TastingSession.fetchRequest()
-        let dateSort = NSSortDescriptor(key: "sessionDate", ascending: false)
-        request.sortDescriptors = [dateSort]
-        
-        let moc = self.persitentContainer.viewContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            print("Failed to init FetchedResultsController: \(error)")
-        }
-        fetchedResultsController.delegate = self
-        
-    }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        initFetchedResultsController()
-    }
-    
-    let dateFormatter: DateFormatter = {
+       let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
