@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Tasting Sessions" id="mlX-i8-9cc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zIa-Dd-Ok4">
                             <connections>
-                                <action selector="addSesison:" destination="0vq-qh-ZoI" id="dVJ-Wo-59x"/>
+                                <segue destination="j7t-ts-lI1" kind="presentation" id="dNP-Pz-ZY9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,6 +60,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ks9-YQ-J95" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="628" y="594"/>
+        </scene>
+        <!--Session Details-->
+        <scene sceneID="c1W-U2-jpM">
+            <objects>
+                <viewController id="Ai3-CA-JcG" customClass="TastingSessionDetailsVC" customModule="TastingNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fGw-jH-a8W"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJh-u1-pYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y23-Cl-RE5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Session Details" id="r64-aQ-1vo">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="la0-T5-9IC">
+                            <connections>
+                                <action selector="cancel:" destination="Ai3-CA-JcG" id="Cpe-6e-mZS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47h-NL-rVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="583.3583208395803"/>
         </scene>
         <!--Tasting Notes-->
         <scene sceneID="cSP-8h-dIh">
@@ -76,6 +101,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTn-OI-Ejf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-325" y="594"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZE8-hP-1Yi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j7t-ts-lI1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EqV-qq-rlj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ai3-CA-JcG" kind="relationship" relationship="rootViewController" id="aSy-K9-DHW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXe-Xq-Ed0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.8" y="582.45877061469275"/>
         </scene>
     </scenes>
 </document>
