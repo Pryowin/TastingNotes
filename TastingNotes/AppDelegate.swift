@@ -17,14 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let formatter = Formatters()
+       
         let navController = window!.rootViewController as! UINavigationController
         let tableViewController = navController.topViewController as! TastingSessionsVC
-        let tastingSessionsFRC = TasingSessionFetchedResultsController ()
-        tableViewController.fetchedResultsController = tastingSessionsFRC.fetchedResultsController
-        tableViewController.fetchedResultsController.delegate = tableViewController
-        tableViewController.dateFormatter = formatter.dateFormatter
+        let tastingSessionsStore = TasingSessionStore()
+        tableViewController.sessionStore = tastingSessionsStore
 
         return true
     }

@@ -13,12 +13,10 @@ class TastingSessionDetailsVC: UIViewController {
     
     // MARK: - Variables
     
-    var dateString: String!
-    var name: String!
-    var location: String!
-    var dateSessionCreated: Date!
-    
-    var fetchedResultsController: NSFetchedResultsController<TastingSession>!
+    var editMode: Bool!
+    var sessionStore: TasingSessionStore!
+    var dateFormatter: DateFormatter!
+    var dateCreated: NSDate!
     
     // MARK: - Outlets and Actions
     
@@ -31,17 +29,25 @@ class TastingSessionDetailsVC: UIViewController {
     }
    
     @IBAction func save(_ sender: UIBarButtonItem) {
-        let context = fetchedResultsController.managedObjectContext
-        let session = TastingSession(context: context)
+        let context = sessionStore.frc.managedObjectContext
         
-        session.sessionDate = dateSessionCreated as NSDate
-        session.sessionName = sessionName.text
-        session.sessionLocation = sessionLocation.text
+        if editMode {
+            let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
+            session.sessionName = sessionName.text
+            session.sessionLocation = sessionLocation.text
+        } else {
+            let session = TastingSession(context: context)
+            session.sessionDate = dateCreated
+            session.sessionName = sessionName.text
+            session.sessionLocation = sessionLocation.text
+        }
+        
         do {
             try context.save()
         } catch let error {
             fatalError("Unable to save \(error)")
         }
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -52,9 +58,20 @@ class TastingSessionDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sessionName.text = name
-        sessionLocation.text = location
-        sessionDate.text = dateString
+        let formatters = Formatters()
+        dateFormatter = formatters.dateFormatter
+        
+        if editMode {
+            self.title = "Edit Session Details"
+            let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
+            sessionName.text = session.sessionName
+            sessionLocation.text = session.sessionLocation
+            sessionDate.text = dateFormatter.string(from: session.sessionDate! as Date)
+        } else {
+            sessionDate.text = dateFormatter.string(from: Date())
+            dateCreated = Date() as NSDate
+            self.title = "Add New Session"
+        }
     }
     
 }

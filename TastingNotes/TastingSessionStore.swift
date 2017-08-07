@@ -9,10 +9,11 @@
 import UIKit
 import CoreData
 
-class TasingSessionFetchedResultsController: NSObject {
+class TasingSessionStore: NSObject {
     
-    var fetchedResultsController: NSFetchedResultsController<TastingSession>
-    
+    var frc: NSFetchedResultsController<TastingSession>
+    var selectedRecord: IndexPath
+       
     let persitentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TastingNotes")
         container.loadPersistentStores {(description, error) in
@@ -25,15 +26,16 @@ class TasingSessionFetchedResultsController: NSObject {
     
     override init() {
         
+        selectedRecord = IndexPath.init(row:0, section: 0)
         let request: NSFetchRequest<TastingSession> = TastingSession.fetchRequest()
         let dateSort = NSSortDescriptor(key: "sessionDate", ascending: false)
         request.sortDescriptors = [dateSort]
         
         let moc = self.persitentContainer.viewContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         
         do {
-            try fetchedResultsController.performFetch()
+            try frc.performFetch()
         } catch {
             print("Failed to init FetchedResultsController: \(error)")
         }

@@ -13,16 +13,17 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - Variables
    
-    var fetchedResultsController: NSFetchedResultsController<TastingSession>!
+    var sessionStore: TasingSessionStore!
     var dateFormatter: DateFormatter!
-    
-    
+
     // MARK: - View Overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        let formatters = Formatters()
+        dateFormatter = formatters.dateFormatter
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,9 +36,13 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         switch segue.identifier{
         case "showSessionDetails"?:
             let sessionDetailController = navController.topViewController as! TastingSessionDetailsVC
-            sessionDetailController.dateString = dateFormatter.string(from: Date())
-            sessionDetailController.dateSessionCreated = Date()
-            sessionDetailController.fetchedResultsController = fetchedResultsController
+            sessionDetailController.sessionStore = sessionStore
+            if (sender != nil) {
+                sessionDetailController.editMode = false
+            } else {
+                sessionDetailController.editMode = true
+            }
+            
         default:
             preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
         }
@@ -53,27 +58,32 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return fetchedResultsController.fetchedObjects!.count
+        return sessionStore.frc.fetchedObjects!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let session = self.fetchedResultsController?.object(at: indexPath)
-        cell.textLabel?.text = session?.sessionName
-        let date = session?.sessionDate as Date!
+        let session = sessionStore.frc.object(at: indexPath)
+        cell.textLabel?.text = session.sessionName
+        let date = session.sessionDate as Date!
         cell.detailTextLabel?.text = dateFormatter.string(from: date!)
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sessionStore.selectedRecord = indexPath
+        performSegue(withIdentifier: "showSessionDetails", sender: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let context = fetchedResultsController?.managedObjectContext
-            let session = self.fetchedResultsController.object(at: indexPath) as NSManagedObject!
-            context?.delete(session!)
+            let context = sessionStore.frc.managedObjectContext
+            let session = sessionStore.frc.object(at: indexPath) as NSManagedObject!
+            context.delete(session!)
             do {
-                try context?.save()
+                try context.save()
             } catch let error {
                 fatalError("Unable to save \(error)")
             }
