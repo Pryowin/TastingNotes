@@ -54,15 +54,18 @@ class TastingSessionDetailsVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setup text fields so that Return will dismiss keyboatd
         self.sessionName.delegate = self
         self.sessionLocation.delegate = self
         
         let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        // Setup formatters
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
         
+        // Init fields based on editing mode
         if editMode {
             self.title = "Edit Session Details"
             let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
@@ -75,7 +78,6 @@ class TastingSessionDetailsVC: UIViewController, UITextFieldDelegate {
             self.title = "Add New Session"
         }
     }
-    
     
     func dismissKeyboard () {
         view.endEditing(true)

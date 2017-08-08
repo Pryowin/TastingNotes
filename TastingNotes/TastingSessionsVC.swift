@@ -22,6 +22,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
     }
@@ -42,7 +43,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
             } else {
                 sessionDetailController.editMode = true
             }
-            
         default:
             preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
         }
@@ -79,10 +79,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let context = sessionStore.frc.managedObjectContext
-            let session = sessionStore.frc.object(at: indexPath) as NSManagedObject!
-            context.delete(session!)
-            sessionStore.save()
+            sessionStore.delete(recordToDelete: indexPath)
         }
     }
     

@@ -50,4 +50,10 @@ class TasingSessionStore: NSObject {
             fatalError("Unable to save \(error)")
         }
     }
+    func delete(recordToDelete: IndexPath) {
+        let context = self.frc.managedObjectContext
+        let session = self.frc.object(at: recordToDelete) as NSManagedObject!
+        context.delete(session!)
+        self.save()
+    }
 }
