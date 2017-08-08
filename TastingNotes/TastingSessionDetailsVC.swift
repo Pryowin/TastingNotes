@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TastingSessionDetailsVC: UIViewController {
+class TastingSessionDetailsVC: UIViewController, UITextFieldDelegate {
     
     // MARK: - Variables
     
@@ -29,34 +29,36 @@ class TastingSessionDetailsVC: UIViewController {
     }
    
     @IBAction func save(_ sender: UIBarButtonItem) {
+        
         let context = sessionStore.frc.managedObjectContext
         
         if editMode {
-            let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
-            session.sessionName = sessionName.text
-            session.sessionLocation = sessionLocation.text
+            let updateSession = sessionStore.frc.object(at: sessionStore.selectedRecord)
+            updateSession.sessionName = sessionName.text
+            updateSession.sessionLocation = sessionLocation.text
         } else {
-            let session = TastingSession(context: context)
-            session.sessionDate = dateCreated
-            session.sessionName = sessionName.text
-            session.sessionLocation = sessionLocation.text
+            let addSession = TastingSession(context: context)
+            addSession.sessionDate = dateCreated
+            addSession.sessionId = UUID() as NSUUID
+            addSession.sessionName = sessionName.text
+            addSession.sessionLocation = sessionLocation.text
         }
         
-        do {
-            try context.save()
-        } catch let error {
-            fatalError("Unable to save \(error)")
-        }
+        sessionStore.save()
         
         dismiss(animated: true, completion: nil)
     }
     
-    // TODO: Dismiss keyboard on click outside
-    
-    // MARK: - View Overrides
+    // MARK: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.sessionName.delegate = self
+        self.sessionLocation.delegate = self
+        
+        let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
@@ -72,6 +74,18 @@ class TastingSessionDetailsVC: UIViewController {
             dateCreated = Date() as NSDate
             self.title = "Add New Session"
         }
+    }
+    
+    
+    func dismissKeyboard () {
+        view.endEditing(true)
+    }
+    
+    //MARK: - Delegate Functions
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

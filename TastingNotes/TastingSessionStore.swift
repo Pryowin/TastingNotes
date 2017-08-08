@@ -42,4 +42,12 @@ class TasingSessionStore: NSObject {
         
     }
     
+    func save() {
+        
+        do {
+            try self.frc.managedObjectContext.save()
+        } catch let error {
+            fatalError("Unable to save \(error)")
+        }
+    }
 }

@@ -82,11 +82,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
             let context = sessionStore.frc.managedObjectContext
             let session = sessionStore.frc.object(at: indexPath) as NSManagedObject!
             context.delete(session!)
-            do {
-                try context.save()
-            } catch let error {
-                fatalError("Unable to save \(error)")
-            }
+            sessionStore.save()
         }
     }
     
@@ -101,6 +97,10 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         case .delete:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        case .update:
+            if let indexPath = indexPath {
+                tableView.reloadRows(at: [indexPath], with: .automatic)
             }
         default:
             break;
