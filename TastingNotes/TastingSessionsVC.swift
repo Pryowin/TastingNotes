@@ -25,6 +25,8 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
+        sessionStore.frc.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,8 +85,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         }
     }
     
-    // MARK: - Fetched Results Controller Delegate
-    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch (type) {
         case .insert:
@@ -103,5 +103,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
             break;
         }
     }
+
 }
 

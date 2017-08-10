@@ -41,6 +41,10 @@ class TasingSessionStore: NSObject {
         }
         
     }
+    func notes() -> [TastingNotes] {
+        return self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes]
+    }
+    
     
     func save() {
         

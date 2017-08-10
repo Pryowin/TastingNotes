@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TastingNotes" representedClassName="TastingNotes" syncable="YES" codeGenerationType="class">
+        <attribute name="appearanceClarity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appearanceColour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appearanceIntensity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="apperanceNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="colour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="conclusion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grapes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noseCharateristics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noseIntensity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noseNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overallRatiing" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteAcidity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteBody" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteFinish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteSweetness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tasteTannins" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vintage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wineName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TastingSession" inverseName="notes" inverseEntity="TastingSession" syncable="YES"/>
+    </entity>
     <entity name="TastingSession" representedClassName="TastingSession" syncable="YES">
         <attribute name="sessionDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="sessionId" optional="YES" attributeType="Transformable" customClassName="NSUUID" syncable="YES"/>
@@ -7,8 +34,10 @@
         <attribute name="sessionLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sessionLon" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sessionName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TastingNotes" inverseName="session" inverseEntity="TastingNotes" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TastingSession" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="TastingSession" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="TastingNotes" positionX="-63" positionY="27" width="128" height="420"/>
     </elements>
 </model>

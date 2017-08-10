@@ -10,6 +10,8 @@
 		FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */; };
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */; };
+		FD39EDB21F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDB11F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift */; };
+		FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */; };
 		FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829B1F34114000FB0E6C /* AppDelegate.swift */; };
 		FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */; };
 		FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC1829F1F34114000FB0E6C /* Main.storyboard */; };
@@ -19,7 +21,6 @@
 		FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */; };
 		FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */; };
 		FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */; };
-		FDC182E11F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DF1F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStore.swift; sourceTree = "<group>"; };
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsVC.swift; sourceTree = "<group>"; };
+		FD39EDB11F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
 		FDC182981F34113F00FB0E6C /* TastingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1829B1F34114000FB0E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSessionsVC.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNotesUITests.swift; sourceTree = "<group>"; };
 		FDC182C01F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FDC182DF1F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +116,13 @@
 				FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */,
 				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
 				FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */,
+				FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */,
 				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */,
 				FDC182AA1F34114000FB0E6C /* Info.plist */,
 				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
-				FDC182DF1F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift */,
 				FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */,
+				FD39EDB11F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift */,
 				FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */,
 			);
 			path = TastingNotes;
@@ -279,11 +282,12 @@
 			files = (
 				FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */,
 				FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */,
-				FDC182E11F34CC8D00FB0E6C /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
+				FD39EDB21F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift in Sources */,
 				FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */,
 				FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
+				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
 				FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
