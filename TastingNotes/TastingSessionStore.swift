@@ -13,6 +13,7 @@ class TasingSessionStore: NSObject {
     
     var frc: NSFetchedResultsController<TastingSession>
     var selectedRecord: IndexPath
+    var selectedNote: IndexPath
        
     let persitentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TastingNotes")
@@ -27,6 +28,8 @@ class TasingSessionStore: NSObject {
     override init() {
         
         selectedRecord = IndexPath.init(row:0, section: 0)
+        selectedNote = IndexPath.init(row: 0, section: 0)
+        
         let request: NSFetchRequest<TastingSession> = TastingSession.fetchRequest()
         let dateSort = NSSortDescriptor(key: "sessionDate", ascending: false)
         request.sortDescriptors = [dateSort]
@@ -41,8 +44,12 @@ class TasingSessionStore: NSObject {
         }
         
     }
-    func notes() -> [TastingNotes] {
-        return self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes]
+    func notes() -> [TastingNotes]? {
+        if selectedRecord != IndexPath.init(row:0, section: 0)  {
+            return (self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes])
+        } else {
+            return nil
+        }
     }
     
     

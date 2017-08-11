@@ -53,13 +53,9 @@ class TastingSessionDetailsVC: UIViewController,
         dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func addNotes(_ sender: UIButton) {
-        
-        let note = TastingNotes(context: sessionStore.frc.managedObjectContext)
-        note.wineName = "Pinot Noir"
-        sessionStore.frc.object(at: sessionStore.selectedRecord).addToNotes(note)
-        sessionStore.save()
-        tableView.reloadData()
+        performSegue(withIdentifier: "showNoteDetails", sender: sender)
     }
    
     @IBOutlet var tableView: UITableView!
@@ -75,13 +71,14 @@ class TastingSessionDetailsVC: UIViewController,
         
         let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
         
         // Setup formatters
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         sessionStore.frc.delegate = nil
         
         
@@ -97,27 +94,55 @@ class TastingSessionDetailsVC: UIViewController,
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        tableView.reloadData()
+    }
+    
+    //MARK: - Functions
+    
     func dismissKeyboard () {
         view.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navController = segue.destination as! UINavigationController
+        switch segue.identifier{
+        case "showNoteDetails"?:
+            let sessionNotesController = navController.topViewController as! TastingNotesDetailsVC
+            sessionNotesController.sessionStore = sessionStore
+            if (sender != nil) {
+                sessionNotesController.editMode = false
+            } else {
+                sessionNotesController.editMode = true
+            }
+        default:
+            preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
+        }
+    }
+    
+    //MARK: - Data Source functions
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    // TODO: Move notes to Session Store
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return (sessionStore.notes().count)
+        if sessionStore.notes() != nil {
+            return sessionStore.notes()!.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
             let notes = sessionStore.notes()
-        let note = notes[indexPath.row]
+        let note = notes![indexPath.row]
         cell.textLabel?.text = note.wineName
         
         return cell
@@ -127,10 +152,15 @@ class TastingSessionDetailsVC: UIViewController,
         if editingStyle == .delete {
             let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
             let notes = sessionStore.notes()
-            let note = notes[indexPath.row]
+            let note = notes![indexPath.row]
             session.removeFromNotes(note)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sessionStore.selectedNote = indexPath
+        performSegue(withIdentifier: "showNoteDetails", sender: nil)
     }
     
     //MARK: - Delegate Functions
