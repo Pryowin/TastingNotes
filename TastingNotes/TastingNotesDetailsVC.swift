@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TastingNotesDetailsVC: UIViewController, UITextViewDelegate {
+class TastingNotesDetailsVC: UITableViewController {
     
     //MARK: - Variables
     
