@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         let navController = window!.rootViewController as! UINavigationController
         let tableViewController = navController.topViewController as! TastingSessionsVC
-        let tastingSessionsStore = TasingSessionStore()
+        let tastingSessionsStore = TastingSessionStore()
        
         tableViewController.sessionStore = tastingSessionsStore
+        tableViewController.sessionStore.frc.delegate = tableViewController
        
         return true
     }

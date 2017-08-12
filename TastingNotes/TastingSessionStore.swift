@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TasingSessionStore: NSObject {
+class TastingSessionStore: NSObject {
     
     var frc: NSFetchedResultsController<TastingSession>
     var selectedRecord: IndexPath
@@ -45,11 +45,8 @@ class TasingSessionStore: NSObject {
         
     }
     func notes() -> [TastingNotes]? {
-        if selectedRecord != IndexPath.init(row:0, section: 0)  {
+        
             return (self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes])
-        } else {
-            return nil
-        }
     }
     
     

@@ -17,7 +17,7 @@ class TastingSessionDetailsVC: UIViewController,
     // MARK: - Variables
     
     var editMode: Bool!
-    var sessionStore: TasingSessionStore!
+    var sessionStore: TastingSessionStore!
     var dateFormatter: DateFormatter!
     var dateCreated: NSDate!
  
@@ -26,7 +26,7 @@ class TastingSessionDetailsVC: UIViewController,
     
     @IBOutlet var sessionName: UITextField!
     @IBOutlet var sessionLocation: UITextField!
-    @IBOutlet var sessionDate: UILabel!
+    @IBOutlet var addNotes: UIButton!
     
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -40,17 +40,18 @@ class TastingSessionDetailsVC: UIViewController,
             let updateSession = sessionStore.frc.object(at: sessionStore.selectedRecord)
             updateSession.sessionName = sessionName.text
             updateSession.sessionLocation = sessionLocation.text
+            sessionStore.save()
+            dismiss(animated: true, completion: nil)
         } else {
             let addSession = TastingSession(context: context)
             addSession.sessionDate = dateCreated
             addSession.sessionId = UUID() as NSUUID
             addSession.sessionName = sessionName.text
             addSession.sessionLocation = sessionLocation.text
+            sessionStore.save()
+            editMode = true
+            addNotes.isEnabled = true
         }
-        
-        sessionStore.save()
-        
-        dismiss(animated: true, completion: nil)
     }
     
     
@@ -79,7 +80,6 @@ class TastingSessionDetailsVC: UIViewController,
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        sessionStore.frc.delegate = nil
         
         
         // Init fields based on editing mode
@@ -88,9 +88,11 @@ class TastingSessionDetailsVC: UIViewController,
             let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
             sessionName.text = session.sessionName
             sessionLocation.text = session.sessionLocation
+            addNotes.isEnabled = true
         } else {
             dateCreated = Date() as NSDate
             self.title = "Add New Session"
+            addNotes.isEnabled = false
         }
     }
     
@@ -131,7 +133,7 @@ class TastingSessionDetailsVC: UIViewController,
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if sessionStore.notes() != nil {
+        if  editMode {
             return sessionStore.notes()!.count
         } else {
             return 0

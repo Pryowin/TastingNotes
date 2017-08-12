@@ -13,7 +13,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     // MARK: - Variables
    
-    var sessionStore: TasingSessionStore!
+    var sessionStore: TastingSessionStore!
     var dateFormatter: DateFormatter!
 
     // MARK: - View Overrides
@@ -32,6 +32,11 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
