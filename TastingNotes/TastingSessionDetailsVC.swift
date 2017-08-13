@@ -20,6 +20,8 @@ class TastingSessionDetailsVC: UIViewController,
     var sessionStore: TastingSessionStore!
     var dateFormatter: DateFormatter!
     var dateCreated: NSDate!
+    
+    let segueName = "showNoteDetails"
  
     
     // MARK: - Outlets and Actions
@@ -56,7 +58,7 @@ class TastingSessionDetailsVC: UIViewController,
     
     
     @IBAction func addNotes(_ sender: UIButton) {
-        performSegue(withIdentifier: "showNoteDetails", sender: sender)
+        performSegue(withIdentifier: segueName, sender: sender)
     }
    
     @IBOutlet var tableView: UITableView!
@@ -77,6 +79,7 @@ class TastingSessionDetailsVC: UIViewController,
         // Setup formatters
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
+        
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -111,7 +114,7 @@ class TastingSessionDetailsVC: UIViewController,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navController = segue.destination as! UINavigationController
         switch segue.identifier{
-        case "showNoteDetails"?:
+        case segueName?:
             let sessionNotesController = navController.topViewController as! TastingNotesDetailsVC
             sessionNotesController.sessionStore = sessionStore
             if (sender != nil) {
@@ -162,7 +165,7 @@ class TastingSessionDetailsVC: UIViewController,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         sessionStore.selectedNote = indexPath
-        performSegue(withIdentifier: "showNoteDetails", sender: nil)
+        performSegue(withIdentifier: segueName, sender: nil)
     }
     
     //MARK: - Delegate Functions

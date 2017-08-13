@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SearchTextField
 
 class TastingNotesDetailsVC: UITableViewController {
     
@@ -15,6 +16,8 @@ class TastingNotesDetailsVC: UITableViewController {
     
     var sessionStore: TastingSessionStore!
     var editMode: Bool!
+    var currencyFormatter: NumberFormatter!
+    var backToNumberFormatter: NumberFormatter!
     
     let sectionTitles = ["Description", "Appearance", "Nose", "Taste", "Conclusion"]
     var sectionShows = [true,true,true,true,true]
@@ -29,10 +32,21 @@ class TastingNotesDetailsVC: UITableViewController {
     //MARK: - Outlets and Actions
     @IBOutlet var wineName: UITextField!
     @IBOutlet var year: UITextField!
-    @IBOutlet var appearanceColour: UITextField!
-    @IBOutlet var appearanceClarity: UITextField!
-    @IBOutlet var appearanceIntensity: UITextField!
+    @IBOutlet var region: UITextField!
+    @IBOutlet var country: UITextField!
+    @IBOutlet var color: SearchTextField!
+    @IBOutlet var type: SearchTextField!
+    @IBOutlet var price: UITextField!
+    
+    @IBAction func priceEditingEnded(_ sender: Any) {
+        let num = Decimal.init(string: price.text!) as NSNumber!
+        price.text = currencyFormatter.string(from: num!)
+    }
+    @IBOutlet var appearanceColour: SearchTextField!
+    @IBOutlet var appearanceClarity: SearchTextField!
+    @IBOutlet var appearanceIntensity: SearchTextField!
     @IBOutlet var appearanceNotes: UITextField!
+  
     
     @IBAction func cancel(_ sender: Any) {
          dismiss(animated: true, completion: nil)
@@ -43,20 +57,10 @@ class TastingNotesDetailsVC: UITableViewController {
         if editMode {
             let notes = sessionStore.notes()
             let note = notes![sessionStore.selectedNote.row]
-            note.wineName = wineName.text
-            note.vintage = Int16(year.text!)!
-            note.appearanceColour = appearanceColour.text
-            note.appearanceClarity = appearanceClarity.text
-            note.appearanceIntensity = appearanceIntensity.text
-            note.apperanceNotes = appearanceNotes.text
+            saveFields(note)
         } else {
             let note = TastingNotes(context: sessionStore.frc.managedObjectContext)
-            note.wineName = wineName.text
-            note.vintage = Int16(year.text!)!
-            note.appearanceColour = appearanceColour.text
-            note.appearanceClarity = appearanceClarity.text
-            note.appearanceIntensity = appearanceIntensity.text
-            note.apperanceNotes = appearanceNotes.text
+            saveFields(note)
             sessionStore.frc.object(at: sessionStore.selectedRecord).addToNotes(note)
         }
         
@@ -70,22 +74,60 @@ class TastingNotesDetailsVC: UITableViewController {
         self.tableView.reloadData()
     }
     
-    //MARK: View Overrides
+    //MARK: - Functions
+    func saveFields(_ note: TastingNotes) {
+        note.wineName = wineName.text
+        note.vintage = Int16(year.text!)!
+        note.region = region.text
+        note.country = country.text
+        note.colour = color.text
+        note.type = type.text
+        
+        if let number = Decimal.init(string: price.text!) {
+            note.price = number as NSDecimalNumber
+        } else {
+            note.price = 0
+        }
+        
+        note.appearanceColour = appearanceColour.text
+        note.appearanceClarity = appearanceClarity.text
+        note.appearanceIntensity = appearanceIntensity.text
+        note.apperanceNotes = appearanceNotes.text
+    }
+    
+    
+    //MARK: - View Overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup formatters
+        let formatters = Formatters()
+        currencyFormatter = formatters.currencyFormatter
+        backToNumberFormatter = formatters.backToNumberFormatter
         
         if editMode {
             let notes = sessionStore.notes()
             let note = notes![sessionStore.selectedNote.row]
             wineName.text = note.wineName
             year.text = "\(note.vintage)"
+            color.text = note.colour
+            region.text = note.region
+            country.text = note.country
+            type.text = note.type
+            let priceString = currencyFormatter.string(from: note.price!)
+            price.text = priceString
             appearanceColour.text = note.appearanceColour
             appearanceClarity.text = note.appearanceClarity
             appearanceIntensity.text = note.appearanceIntensity
             appearanceNotes.text = note.apperanceNotes
+            
         }
-        
+        configureAppearanceColor()
+        configureAppearanceClarity()
+        configureAppearanceIntensity()
+        configureType()
+        configureColor()
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -144,5 +186,33 @@ class TastingNotesDetailsVC: UITableViewController {
        
         self.tableView.reloadData()
     }
+    
+    
+    //MARK: - Autocomplete functions
+    func setTheme(textField: SearchTextField) {
+        textField.theme.bgColor = UIColor.init(hexColor: sectionHeaderColor)
+        textField.theme.fontColor = .black
+    }
+    func configureAppearanceColor() {
+        appearanceColour.filterStrings(["Amber","Gold","Straw","Pink","Salmon", "Orange", "Purple","Ruby","Garnet","Tawney"])
+        setTheme(textField: appearanceColour)
+    }
+    func configureAppearanceClarity() {
+        appearanceClarity.filterStrings(["Clear","Hazy"])
+        setTheme(textField: appearanceClarity)
+    }
+    func configureAppearanceIntensity() {
+        appearanceIntensity.filterStrings(["Pale","Medium","Deep"])
+        setTheme(textField: appearanceIntensity)
+    }
+    func configureColor () {
+        color.filterStrings(["Red","White","Rosé"])
+        setTheme(textField: color)
+    }
+    func configureType () {
+        type.filterStrings(["Still","Sparkling","Dessert","Port"])
+        setTheme(textField: type)
+    }
+    
 }
 
