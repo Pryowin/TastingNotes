@@ -1,0 +1,868 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		243B969643AE85B89BD96EAE5A792CB9 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBDD8A2CC7723573E4982B4BF4C28B /* SearchTextField.swift */; };
+		358C39BF635E5C93BB409A0F07106E53 /* Pods-TastingNotesUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA6698D3B056B0F967C6CC6A2D00EEC /* Pods-TastingNotesUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59A4FB2F89594D36948A66EF166C27D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5E94332B58CA0D42922915C00DF0AB58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		68C4BC80E7DE59E10D622D67A37ADF5D /* Pods-TastingNotesUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E529DA42535107CB36138F1981F64F /* Pods-TastingNotesUITests-dummy.m */; };
+		73C4E06B49A2EDF9E558798C46F02C9E /* Pods-TastingNotesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 209EC946B2451E42A0BCE7BFEEA1306C /* Pods-TastingNotesTests-dummy.m */; };
+		7817E5DE982E5F7B1952934249F05359 /* SearchTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E0CC4C8AAF0A2D483E76D20D1479EA /* SearchTextField-dummy.m */; };
+		7819489A8BFD0CAAFF2FC0FC622A56CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		87B3EABDBF0269D56A59FD19A8D5F4E0 /* Pods-TastingNotesTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D26C8B0F524319635B62B09AE80AED5D /* Pods-TastingNotesTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3D3B2C505B9100544AF09B451221692 /* SearchTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0038A559AF139AE630EC7F5B4E65694D /* SearchTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5E0FC477392849AB67C8D560E9ECF58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EF2859BE3858755D936DD759B5552F4D /* Pods-TastingNotes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D82224791C90DAAF0E3063EB6E931AB /* Pods-TastingNotes-dummy.m */; };
+		F67121D503B37054B9900806007A9B87 /* Pods-TastingNotes-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D856CB40366FDB5DAAB76652D222125 /* Pods-TastingNotes-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE5FE293746BF088DB47471890C71921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73FE39465DCD37D49FDD931CDC532A74;
+			remoteInfo = SearchTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0038A559AF139AE630EC7F5B4E65694D /* SearchTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SearchTextField-umbrella.h"; sourceTree = "<group>"; };
+		04C6782ED74A7A1F59FDFF839E077420 /* Pods_TastingNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TastingNotesUITests.framework; path = "Pods-TastingNotesUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA6CF9C9160247559CA2B0F6A5F4D5E /* Pods-TastingNotesUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TastingNotesUITests-resources.sh"; sourceTree = "<group>"; };
+		18D4DB8D618F0CD88F1B8D16A123A31D /* SearchTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SearchTextField.xcconfig; sourceTree = "<group>"; };
+		19311BD09835BC55EBBD9763E1BF5DC2 /* SearchTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SearchTextField.modulemap; sourceTree = "<group>"; };
+		1DDF26DBDA8F5EE98BA47FAB34D7FCF1 /* Pods-TastingNotesUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TastingNotesUITests.modulemap"; sourceTree = "<group>"; };
+		209EC946B2451E42A0BCE7BFEEA1306C /* Pods-TastingNotesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TastingNotesTests-dummy.m"; sourceTree = "<group>"; };
+		265E9EBC9F0450868AA6F8076C9E81C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CFFA1A1C5A87340972DF95310153CCE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32D9C30594DA23F012E9BDCB66A5190A /* SearchTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SearchTextField-prefix.pch"; sourceTree = "<group>"; };
+		3AA6698D3B056B0F967C6CC6A2D00EEC /* Pods-TastingNotesUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TastingNotesUITests-umbrella.h"; sourceTree = "<group>"; };
+		41A789EF13F1202916C9588B2C0BCB2D /* Pods-TastingNotesTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TastingNotesTests-resources.sh"; sourceTree = "<group>"; };
+		47279DFC8E9861258D62763490770B24 /* Pods-TastingNotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TastingNotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D82224791C90DAAF0E3063EB6E931AB /* Pods-TastingNotes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TastingNotes-dummy.m"; sourceTree = "<group>"; };
+		5017A884BCF60F8CD62B47926786E70C /* Pods-TastingNotesUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TastingNotesUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		58A7E0A9F3A8FC7F88522EF8AA6429D4 /* Pods-TastingNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TastingNotes.debug.xcconfig"; sourceTree = "<group>"; };
+		58E529DA42535107CB36138F1981F64F /* Pods-TastingNotesUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TastingNotesUITests-dummy.m"; sourceTree = "<group>"; };
+		6226D0E43771851238AC1CEB53BCD92B /* Pods_TastingNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TastingNotesTests.framework; path = "Pods-TastingNotesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6452070785C2681FC4A6115773C69382 /* Pods-TastingNotesTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TastingNotesTests.modulemap"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7AAD04E7EF753BC6DF1D493D7800594D /* Pods-TastingNotes-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TastingNotes-frameworks.sh"; sourceTree = "<group>"; };
+		8A31F9A991C93037FBB0689044C1C84A /* Pods-TastingNotesTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TastingNotesTests-frameworks.sh"; sourceTree = "<group>"; };
+		8CF194591AF67062151572F3C92B9340 /* Pods-TastingNotes.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TastingNotes.modulemap"; sourceTree = "<group>"; };
+		8D856CB40366FDB5DAAB76652D222125 /* Pods-TastingNotes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TastingNotes-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		998F0FE07A01D8096BCA36DCA79DDE91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8A7C40D0936956A7A6D855448B43AF4 /* SearchTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SearchTextField.framework; path = SearchTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9870998E88935B61BBD9A62E73A0A92 /* Pods-TastingNotesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TastingNotesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B0351D51D7CC2DD6CD3E07F806541796 /* Pods-TastingNotes-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TastingNotes-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC5A275AAF720D6CD93E9CF5E1E73893 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C770B414BD8CAAFA4FF6D6D05BC63BB2 /* Pods-TastingNotesUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TastingNotesUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D26C8B0F524319635B62B09AE80AED5D /* Pods-TastingNotesTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TastingNotesTests-umbrella.h"; sourceTree = "<group>"; };
+		D50A8304F87C676EEDA7D73F40DA419E /* Pods-TastingNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TastingNotes.release.xcconfig"; sourceTree = "<group>"; };
+		D576376F8C0E66314595F52C1EA1A432 /* Pods-TastingNotesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TastingNotesTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D59419704D1D3162E6F6D7BDE72AFADD /* Pods-TastingNotes-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TastingNotes-resources.sh"; sourceTree = "<group>"; };
+		DADBDD8A2CC7723573E4982B4BF4C28B /* SearchTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchTextField.swift; path = SearchTextField/Classes/SearchTextField.swift; sourceTree = "<group>"; };
+		DDE9A4D990DBB97878705187117E5AF9 /* Pods-TastingNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TastingNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0C5F7EDB7FD1F16DBB6628D2382C7E7 /* Pods-TastingNotesUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TastingNotesUITests-frameworks.sh"; sourceTree = "<group>"; };
+		EF1D9A68B92012316A7F35108767AB59 /* Pods_TastingNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TastingNotes.framework; path = "Pods-TastingNotes.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CCE5EF5728D9FACAAEF08E72AD6D4E /* Pods-TastingNotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TastingNotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F373852E6953D4538FA6E2C1AEE1A1E3 /* Pods-TastingNotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TastingNotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F3E0CC4C8AAF0A2D483E76D20D1479EA /* SearchTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SearchTextField-dummy.m"; sourceTree = "<group>"; };
+		FE1449A0A0A048833067CA96D78D749B /* Pods-TastingNotes-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TastingNotes-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21A45CF2933457377206A2792354D9AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E0FC477392849AB67C8D560E9ECF58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E6B752B79C70190826D072551F5B9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7819489A8BFD0CAAFF2FC0FC622A56CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501EB8612EBCA39FFF272B4C8027DC29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E94332B58CA0D42922915C00DF0AB58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		803A46ED9773FDEB1FD6A3FEB498BEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A4FB2F89594D36948A66EF166C27D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0369F6394E1C0582BF08D11A0B8DEE61 /* SearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				DADBDD8A2CC7723573E4982B4BF4C28B /* SearchTextField.swift */,
+				4AC480FF100B8A68649FA1CCB524CAAB /* Support Files */,
+			);
+			name = SearchTextField;
+			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		07818FAB8E8A8A3E15E1E2D6D881E5BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF1D9A68B92012316A7F35108767AB59 /* Pods_TastingNotes.framework */,
+				6226D0E43771851238AC1CEB53BCD92B /* Pods_TastingNotesTests.framework */,
+				04C6782ED74A7A1F59FDFF839E077420 /* Pods_TastingNotesUITests.framework */,
+				A8A7C40D0936956A7A6D855448B43AF4 /* SearchTextField.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D657F87B1F82850A0E558661DE750B1 /* Pods-TastingNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A275AAF720D6CD93E9CF5E1E73893 /* Info.plist */,
+				6452070785C2681FC4A6115773C69382 /* Pods-TastingNotesTests.modulemap */,
+				A9870998E88935B61BBD9A62E73A0A92 /* Pods-TastingNotesTests-acknowledgements.markdown */,
+				D576376F8C0E66314595F52C1EA1A432 /* Pods-TastingNotesTests-acknowledgements.plist */,
+				209EC946B2451E42A0BCE7BFEEA1306C /* Pods-TastingNotesTests-dummy.m */,
+				8A31F9A991C93037FBB0689044C1C84A /* Pods-TastingNotesTests-frameworks.sh */,
+				41A789EF13F1202916C9588B2C0BCB2D /* Pods-TastingNotesTests-resources.sh */,
+				D26C8B0F524319635B62B09AE80AED5D /* Pods-TastingNotesTests-umbrella.h */,
+				DDE9A4D990DBB97878705187117E5AF9 /* Pods-TastingNotesTests.debug.xcconfig */,
+				47279DFC8E9861258D62763490770B24 /* Pods-TastingNotesTests.release.xcconfig */,
+			);
+			name = "Pods-TastingNotesTests";
+			path = "Target Support Files/Pods-TastingNotesTests";
+			sourceTree = "<group>";
+		};
+		32E354E2160D8ED8A45C188196F00FF2 /* Pods-TastingNotes */ = {
+			isa = PBXGroup;
+			children = (
+				265E9EBC9F0450868AA6F8076C9E81C6 /* Info.plist */,
+				8CF194591AF67062151572F3C92B9340 /* Pods-TastingNotes.modulemap */,
+				FE1449A0A0A048833067CA96D78D749B /* Pods-TastingNotes-acknowledgements.markdown */,
+				B0351D51D7CC2DD6CD3E07F806541796 /* Pods-TastingNotes-acknowledgements.plist */,
+				4D82224791C90DAAF0E3063EB6E931AB /* Pods-TastingNotes-dummy.m */,
+				7AAD04E7EF753BC6DF1D493D7800594D /* Pods-TastingNotes-frameworks.sh */,
+				D59419704D1D3162E6F6D7BDE72AFADD /* Pods-TastingNotes-resources.sh */,
+				8D856CB40366FDB5DAAB76652D222125 /* Pods-TastingNotes-umbrella.h */,
+				58A7E0A9F3A8FC7F88522EF8AA6429D4 /* Pods-TastingNotes.debug.xcconfig */,
+				D50A8304F87C676EEDA7D73F40DA419E /* Pods-TastingNotes.release.xcconfig */,
+			);
+			name = "Pods-TastingNotes";
+			path = "Target Support Files/Pods-TastingNotes";
+			sourceTree = "<group>";
+		};
+		4AC480FF100B8A68649FA1CCB524CAAB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				998F0FE07A01D8096BCA36DCA79DDE91 /* Info.plist */,
+				19311BD09835BC55EBBD9763E1BF5DC2 /* SearchTextField.modulemap */,
+				18D4DB8D618F0CD88F1B8D16A123A31D /* SearchTextField.xcconfig */,
+				F3E0CC4C8AAF0A2D483E76D20D1479EA /* SearchTextField-dummy.m */,
+				32D9C30594DA23F012E9BDCB66A5190A /* SearchTextField-prefix.pch */,
+				0038A559AF139AE630EC7F5B4E65694D /* SearchTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SearchTextField";
+			sourceTree = "<group>";
+		};
+		6926846FE22D91FF75824F34EB73ADAB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				32E354E2160D8ED8A45C188196F00FF2 /* Pods-TastingNotes */,
+				1D657F87B1F82850A0E558661DE750B1 /* Pods-TastingNotesTests */,
+				EFBCC0BBBEB3582AF3E80A342E75399E /* Pods-TastingNotesUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C2F4B51807996A845941D41828B2F016 /* Pods */,
+				07818FAB8E8A8A3E15E1E2D6D881E5BC /* Products */,
+				6926846FE22D91FF75824F34EB73ADAB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2F4B51807996A845941D41828B2F016 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0369F6394E1C0582BF08D11A0B8DEE61 /* SearchTextField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EFBCC0BBBEB3582AF3E80A342E75399E /* Pods-TastingNotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CFFA1A1C5A87340972DF95310153CCE /* Info.plist */,
+				1DDF26DBDA8F5EE98BA47FAB34D7FCF1 /* Pods-TastingNotesUITests.modulemap */,
+				C770B414BD8CAAFA4FF6D6D05BC63BB2 /* Pods-TastingNotesUITests-acknowledgements.markdown */,
+				5017A884BCF60F8CD62B47926786E70C /* Pods-TastingNotesUITests-acknowledgements.plist */,
+				58E529DA42535107CB36138F1981F64F /* Pods-TastingNotesUITests-dummy.m */,
+				E0C5F7EDB7FD1F16DBB6628D2382C7E7 /* Pods-TastingNotesUITests-frameworks.sh */,
+				0EA6CF9C9160247559CA2B0F6A5F4D5E /* Pods-TastingNotesUITests-resources.sh */,
+				3AA6698D3B056B0F967C6CC6A2D00EEC /* Pods-TastingNotesUITests-umbrella.h */,
+				F2CCE5EF5728D9FACAAEF08E72AD6D4E /* Pods-TastingNotesUITests.debug.xcconfig */,
+				F373852E6953D4538FA6E2C1AEE1A1E3 /* Pods-TastingNotesUITests.release.xcconfig */,
+			);
+			name = "Pods-TastingNotesUITests";
+			path = "Target Support Files/Pods-TastingNotesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C6AAC10C3C7ADDBCC8B7F9681408FA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87B3EABDBF0269D56A59FD19A8D5F4E0 /* Pods-TastingNotesTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B91EF77DF04B2DF2B10C69E0C80F641 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358C39BF635E5C93BB409A0F07106E53 /* Pods-TastingNotesUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D724A2B969B2C7DC68845B3C3A49B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67121D503B37054B9900806007A9B87 /* Pods-TastingNotes-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF63F8E07F50C66822DDF8291F286B71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D3B2C505B9100544AF09B451221692 /* SearchTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4CFFFF3B6C2A7810CF03036CD3493769 /* Pods-TastingNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30494961FB71D1FF2029C23A4B465343 /* Build configuration list for PBXNativeTarget "Pods-TastingNotesTests" */;
+			buildPhases = (
+				B0B648D4D09B8373E5DBACE2F2BB6BD6 /* Sources */,
+				803A46ED9773FDEB1FD6A3FEB498BEED /* Frameworks */,
+				1C6AAC10C3C7ADDBCC8B7F9681408FA5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TastingNotesTests";
+			productName = "Pods-TastingNotesTests";
+			productReference = 6226D0E43771851238AC1CEB53BCD92B /* Pods_TastingNotesTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73FE39465DCD37D49FDD931CDC532A74 /* SearchTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 134CE8A8FFF80009ED8BBFFF88C0280E /* Build configuration list for PBXNativeTarget "SearchTextField" */;
+			buildPhases = (
+				A9142E94BE88D48803ED158C712FEEFA /* Sources */,
+				21A45CF2933457377206A2792354D9AB /* Frameworks */,
+				EF63F8E07F50C66822DDF8291F286B71 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchTextField;
+			productName = SearchTextField;
+			productReference = A8A7C40D0936956A7A6D855448B43AF4 /* SearchTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBAD9C940D90DA816C537A060D241585 /* Pods-TastingNotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72F081C9DCBC184D6E0A70B804FA84F1 /* Build configuration list for PBXNativeTarget "Pods-TastingNotesUITests" */;
+			buildPhases = (
+				52B21F1037904BA9F241314B9B28CCB7 /* Sources */,
+				501EB8612EBCA39FFF272B4C8027DC29 /* Frameworks */,
+				3B91EF77DF04B2DF2B10C69E0C80F641 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TastingNotesUITests";
+			productName = "Pods-TastingNotesUITests";
+			productReference = 04C6782ED74A7A1F59FDFF839E077420 /* Pods_TastingNotesUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E2D7D742C8C351258A7C262D966F40B9 /* Pods-TastingNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A86F1F2BF96568E771407F1A2F3C216 /* Build configuration list for PBXNativeTarget "Pods-TastingNotes" */;
+			buildPhases = (
+				45A201369F8AFD8B3705B641AA1CE057 /* Sources */,
+				4E6B752B79C70190826D072551F5B9CD /* Frameworks */,
+				C7D724A2B969B2C7DC68845B3C3A49B6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB4E38E0CB02E5BF687F0F779CD5FC6A /* PBXTargetDependency */,
+			);
+			name = "Pods-TastingNotes";
+			productName = "Pods-TastingNotes";
+			productReference = EF1D9A68B92012316A7F35108767AB59 /* Pods_TastingNotes.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 07818FAB8E8A8A3E15E1E2D6D881E5BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2D7D742C8C351258A7C262D966F40B9 /* Pods-TastingNotes */,
+				4CFFFF3B6C2A7810CF03036CD3493769 /* Pods-TastingNotesTests */,
+				BBAD9C940D90DA816C537A060D241585 /* Pods-TastingNotesUITests */,
+				73FE39465DCD37D49FDD931CDC532A74 /* SearchTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45A201369F8AFD8B3705B641AA1CE057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2859BE3858755D936DD759B5552F4D /* Pods-TastingNotes-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B21F1037904BA9F241314B9B28CCB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C4BC80E7DE59E10D622D67A37ADF5D /* Pods-TastingNotesUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9142E94BE88D48803ED158C712FEEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7817E5DE982E5F7B1952934249F05359 /* SearchTextField-dummy.m in Sources */,
+				243B969643AE85B89BD96EAE5A792CB9 /* SearchTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B648D4D09B8373E5DBACE2F2BB6BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C4E06B49A2EDF9E558798C46F02C9E /* Pods-TastingNotesTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB4E38E0CB02E5BF687F0F779CD5FC6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SearchTextField;
+			target = 73FE39465DCD37D49FDD931CDC532A74 /* SearchTextField */;
+			targetProxy = FE5FE293746BF088DB47471890C71921 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		35B476673ABB63BFBCC07E85C654FC56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2CCE5EF5728D9FACAAEF08E72AD6D4E /* Pods-TastingNotesUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TastingNotesUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TastingNotesUITests/Pods-TastingNotesUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TastingNotesUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39A3434C8102BF3B387BB91E2E3F1022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50A8304F87C676EEDA7D73F40DA419E /* Pods-TastingNotes.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TastingNotes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TastingNotes/Pods-TastingNotes.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TastingNotes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3A0A080D6690F7BA55CF65537D8DE77A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F373852E6953D4538FA6E2C1AEE1A1E3 /* Pods-TastingNotesUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TastingNotesUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TastingNotesUITests/Pods-TastingNotesUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TastingNotesUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FA450CA47912A63AFA604B6104E1C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDE9A4D990DBB97878705187117E5AF9 /* Pods-TastingNotesTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TastingNotesTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TastingNotesTests/Pods-TastingNotesTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TastingNotesTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A4E82FC93F18B1DCB6D2A21C45CA393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47279DFC8E9861258D62763490770B24 /* Pods-TastingNotesTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TastingNotesTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TastingNotesTests/Pods-TastingNotesTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TastingNotesTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		728417D767191B431985E33DEBA2D161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D4DB8D618F0CD88F1B8D16A123A31D /* SearchTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SearchTextField/SearchTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SearchTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SearchTextField/SearchTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SearchTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ACCBACDA6BE46C672A0BE3B4468AB294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58A7E0A9F3A8FC7F88522EF8AA6429D4 /* Pods-TastingNotes.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TastingNotes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TastingNotes/Pods-TastingNotes.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TastingNotes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC8E2D3B3FCA991FD723A82491CC0FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D4DB8D618F0CD88F1B8D16A123A31D /* SearchTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SearchTextField/SearchTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SearchTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SearchTextField/SearchTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SearchTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		134CE8A8FFF80009ED8BBFFF88C0280E /* Build configuration list for PBXNativeTarget "SearchTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				728417D767191B431985E33DEBA2D161 /* Debug */,
+				BC8E2D3B3FCA991FD723A82491CC0FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30494961FB71D1FF2029C23A4B465343 /* Build configuration list for PBXNativeTarget "Pods-TastingNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FA450CA47912A63AFA604B6104E1C72 /* Debug */,
+				6A4E82FC93F18B1DCB6D2A21C45CA393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A86F1F2BF96568E771407F1A2F3C216 /* Build configuration list for PBXNativeTarget "Pods-TastingNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCBACDA6BE46C672A0BE3B4468AB294 /* Debug */,
+				39A3434C8102BF3B387BB91E2E3F1022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72F081C9DCBC184D6E0A70B804FA84F1 /* Build configuration list for PBXNativeTarget "Pods-TastingNotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35B476673ABB63BFBCC07E85C654FC56 /* Debug */,
+				3A0A080D6690F7BA55CF65537D8DE77A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
