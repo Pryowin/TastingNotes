@@ -47,6 +47,17 @@ class TastingNotesDetailsVC: UITableViewController {
     @IBOutlet var appearanceIntensity: SearchTextField!
     @IBOutlet var appearanceNotes: UITextField!
   
+    @IBOutlet var noseIntensity: SearchTextField!
+    @IBOutlet var noseAromas: UITextField!
+    @IBOutlet var noseNotes: UITextField!
+    
+    @IBOutlet var tasteSweetness: SearchTextField!
+    @IBOutlet var tasteAcidity: SearchTextField!
+    @IBOutlet var tasteTannin: SearchTextField!
+    @IBOutlet var tasteBody: SearchTextField!
+    @IBOutlet var tasteFlavor: UITextField!
+    @IBOutlet var tasteFinish: SearchTextField!
+    @IBOutlet var tasteNotes: UITextField!
     
     @IBAction func cancel(_ sender: Any) {
          dismiss(animated: true, completion: nil)
@@ -93,8 +104,19 @@ class TastingNotesDetailsVC: UITableViewController {
         note.appearanceClarity = appearanceClarity.text
         note.appearanceIntensity = appearanceIntensity.text
         note.apperanceNotes = appearanceNotes.text
+        
+        note.noseIntensity = noseIntensity.text
+        note.noseCharateristics = noseAromas.text
+        note.noseNotes = noseNotes.text
+        
+        note.tasteSweetness = tasteSweetness.text
+        note.tasteBody = tasteBody.text
+        note.tasteAcidity = tasteAcidity.text
+        note.tasteTannins = tasteTannin.text
+        note.tasteNotes = tasteNotes.text
+        note.tasteStyle = tasteFlavor.text
+        note.tasteFinish = tasteFinish.text
     }
-    
     
     //MARK: - View Overrides
     
@@ -117,10 +139,23 @@ class TastingNotesDetailsVC: UITableViewController {
             type.text = note.type
             let priceString = currencyFormatter.string(from: note.price!)
             price.text = priceString
+            
             appearanceColour.text = note.appearanceColour
             appearanceClarity.text = note.appearanceClarity
             appearanceIntensity.text = note.appearanceIntensity
             appearanceNotes.text = note.apperanceNotes
+            
+            noseIntensity.text = note.noseIntensity
+            noseAromas.text = note.noseCharateristics
+            noseNotes.text = note.noseNotes
+            
+            tasteFlavor.text = note.tasteStyle
+            tasteNotes.text = note.tasteNotes
+            tasteTannin.text = note.tasteTannins
+            tasteAcidity.text = note.tasteAcidity
+            tasteBody.text = note.tasteBody
+            tasteFinish.text = note.tasteFinish
+            tasteSweetness.text = note.tasteSweetness
             
         }
         configureAppearanceColor()
@@ -128,6 +163,12 @@ class TastingNotesDetailsVC: UITableViewController {
         configureAppearanceIntensity()
         configureType()
         configureColor()
+        configureNoseIntensity()
+        configureTasteBody()
+        configureTasteFinish()
+        configureTasteTannin()
+        configureTasteAcidity()
+        configureTasteSweetness()
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -187,32 +228,59 @@ class TastingNotesDetailsVC: UITableViewController {
         self.tableView.reloadData()
     }
     
-    
     //MARK: - Autocomplete functions
     func setTheme(textField: SearchTextField) {
         textField.theme.bgColor = UIColor.init(hexColor: sectionHeaderColor)
         textField.theme.fontColor = .black
     }
+    
     func configureAppearanceColor() {
         appearanceColour.filterStrings(["Amber","Gold","Straw","Pink","Salmon", "Orange", "Purple","Ruby","Garnet","Tawney"])
         setTheme(textField: appearanceColour)
     }
+    
     func configureAppearanceClarity() {
         appearanceClarity.filterStrings(["Clear","Hazy"])
         setTheme(textField: appearanceClarity)
     }
+    
     func configureAppearanceIntensity() {
         appearanceIntensity.filterStrings(["Pale","Medium","Deep"])
         setTheme(textField: appearanceIntensity)
     }
+    
     func configureColor () {
         color.filterStrings(["Red","White","Rosé"])
         setTheme(textField: color)
     }
+    
     func configureType () {
         type.filterStrings(["Still","Sparkling","Dessert","Port"])
         setTheme(textField: type)
     }
-    
+    func configureNoseIntensity () {
+        noseIntensity.filterStrings(["Light","Medium","Prounounced"])
+            setTheme(textField: noseIntensity)
+    }
+    func configureTasteSweetness () {
+        tasteSweetness.filterStrings(["Dry", "Off Dry","Medium","Sweet"])
+        setTheme(textField: tasteSweetness)
+    }
+    func configureTasteAcidity () {
+        tasteAcidity.filterStrings(["Low","Medium","Medium Plus","High" ])
+        setTheme(textField: tasteAcidity)
+    }
+    func configureTasteTannin () {
+        tasteTannin.filterStrings(["Low","Medium","High"])
+        setTheme(textField: tasteTannin)
+    }
+    func configureTasteBody () {
+        tasteBody.filterStrings(["Light","Medium","Full"])
+        setTheme(textField: tasteBody)
+    }
+    func configureTasteFinish () {
+        tasteFinish.filterStrings(["Short", "Medium", "Long"])
+        setTheme(textField: tasteFinish)
+    }
 }
 
