@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class TastingSessionDetailsVC: UIViewController,
                                 UITextFieldDelegate,
                                 UITableViewDelegate,
@@ -149,6 +150,12 @@ class TastingSessionDetailsVC: UIViewController,
             let notes = sessionStore.notes()
         let note = notes![indexPath.row]
         cell.textLabel?.text = note.wineName
+        if (note.overallRatiing != 0) {
+            cell.detailTextLabel?.text = String(note.overallRatiing)
+        } else {
+            cell.detailTextLabel?.text = " "
+        }
+        
         
         return cell
     }

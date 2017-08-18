@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Grapes" representedClassName=".Grapes" syncable="YES">
+        <attribute name="common" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="grape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="percentages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Percentages" inverseName="grapes" inverseEntity="Percentages" syncable="YES"/>
+    </entity>
+    <entity name="Percentages" representedClassName="Percentages" syncable="YES" codeGenerationType="class">
+        <attribute name="percentage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="grapes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grapes" inverseName="percentages" inverseEntity="Grapes" syncable="YES"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TastingNotes" inverseName="percentages" inverseEntity="TastingNotes" syncable="YES"/>
+    </entity>
     <entity name="TastingNotes" representedClassName="TastingNotes" syncable="YES" codeGenerationType="class">
         <attribute name="appearanceClarity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="appearanceColour" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,6 +36,7 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vintage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="wineName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="percentages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Percentages" inverseName="notes" inverseEntity="Percentages" syncable="YES"/>
         <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TastingSession" inverseName="notes" inverseEntity="TastingSession" syncable="YES"/>
     </entity>
     <entity name="TastingSession" representedClassName="TastingSession" syncable="YES">
@@ -37,7 +49,9 @@
         <relationship name="notes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TastingNotes" inverseName="session" inverseEntity="TastingNotes" syncable="YES"/>
     </entity>
     <elements>
+        <element name="TastingNotes" positionX="-63" positionY="27" width="128" height="435"/>
         <element name="TastingSession" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="TastingNotes" positionX="-63" positionY="27" width="128" height="420"/>
+        <element name="Grapes" positionX="-54" positionY="135" width="128" height="105"/>
+        <element name="Percentages" positionX="-45" positionY="144" width="128" height="90"/>
     </elements>
 </model>

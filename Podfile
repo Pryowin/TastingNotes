@@ -7,6 +7,7 @@ target 'TastingNotes' do
 
   # Pods for TastingNotes
   pod "SearchTextField"
+  pod "Cosmos", '~> 11.0'
 
   target 'TastingNotesTests' do
     inherit! :search_paths

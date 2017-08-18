@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import SearchTextField
+import Cosmos
 
 class TastingNotesDetailsVC: UITableViewController {
     
@@ -58,6 +59,9 @@ class TastingNotesDetailsVC: UITableViewController {
     @IBOutlet var tasteFlavor: UITextField!
     @IBOutlet var tasteFinish: SearchTextField!
     @IBOutlet var tasteNotes: UITextField!
+    
+    @IBOutlet var conclusion: UITextField!
+    @IBOutlet var rating: CosmosView!
     
     @IBAction func cancel(_ sender: Any) {
          dismiss(animated: true, completion: nil)
@@ -116,6 +120,9 @@ class TastingNotesDetailsVC: UITableViewController {
         note.tasteNotes = tasteNotes.text
         note.tasteStyle = tasteFlavor.text
         note.tasteFinish = tasteFinish.text
+        
+        note.conclusion = conclusion.text
+        note.overallRatiing = Int16(Int(rating.rating))
     }
     
     //MARK: - View Overrides
@@ -156,6 +163,9 @@ class TastingNotesDetailsVC: UITableViewController {
             tasteBody.text = note.tasteBody
             tasteFinish.text = note.tasteFinish
             tasteSweetness.text = note.tasteSweetness
+            
+            conclusion.text = note.conclusion
+            rating.rating = Double(note.overallRatiing)
             
         }
         configureAppearanceColor()

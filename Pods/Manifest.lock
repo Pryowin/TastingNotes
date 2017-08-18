@@ -1,12 +1,15 @@
 PODS:
+  - Cosmos (11.0.3)
   - SearchTextField (1.1.6)
 
 DEPENDENCIES:
+  - Cosmos (~> 11.0)
   - SearchTextField
 
 SPEC CHECKSUMS:
+  Cosmos: eb506859929f4add2d2aec822a27efb2f718a95d
   SearchTextField: 913343415f7cb0bfa29db09e00ce4b54274b611b
 
-PODFILE CHECKSUM: 7dead44f88aa33d717206977033f616494ae78f7
+PODFILE CHECKSUM: 19bd1d00a85163b7c417a40a5fb0221dab06190a
 
 COCOAPODS: 1.3.1

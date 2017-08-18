@@ -13,10 +13,12 @@
 		FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */; };
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */; };
-		FD39EDB21F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDB11F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift */; };
 		FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */; };
 		FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */; };
 		FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */; };
+		FDB868271F41F04100FF18EB /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB868241F41F04100FF18EB /* TastingSession+CoreDataProperties.swift */; };
+		FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */; };
+		FDB868311F41FA5600FF18EB /* Grapes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */; };
 		FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829B1F34114000FB0E6C /* AppDelegate.swift */; };
 		FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */; };
 		FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC1829F1F34114000FB0E6C /* Main.storyboard */; };
@@ -57,10 +59,12 @@
 		FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStore.swift; sourceTree = "<group>"; };
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsVC.swift; sourceTree = "<group>"; };
-		FD39EDB11F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
 		FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingNotesDetailsVC.swift; sourceTree = "<group>"; };
+		FDB868241F41F04100FF18EB /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDC182981F34113F00FB0E6C /* TastingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1829B1F34114000FB0E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSessionsVC.swift; sourceTree = "<group>"; };
@@ -167,8 +171,10 @@
 				FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */,
 				FDC182AA1F34114000FB0E6C /* Info.plist */,
 				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
+				FDB868241F41F04100FF18EB /* TastingSession+CoreDataProperties.swift */,
 				FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */,
-				FD39EDB11F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift */,
+				FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */,
+				FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */,
 				FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */,
 			);
 			path = TastingNotes;
@@ -338,10 +344,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TastingNotes/Pods-TastingNotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,12 +496,14 @@
 				FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */,
 				FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */,
 				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
-				FD39EDB21F39FF7200FE50D3 /* TastingSession+CoreDataProperties.swift in Sources */,
+				FDB868311F41FA5600FF18EB /* Grapes+CoreDataProperties.swift in Sources */,
 				FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */,
 				FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
 				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
+				FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */,
 				FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */,
+				FDB868271F41F04100FF18EB /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */,
 				FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */,
 			);
