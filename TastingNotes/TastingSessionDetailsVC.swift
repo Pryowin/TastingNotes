@@ -24,7 +24,6 @@ class TastingSessionDetailsVC: UIViewController,
     
     let segueName = "showNoteDetails"
  
-    
     // MARK: - Outlets and Actions
     
     @IBOutlet var sessionName: UITextField!

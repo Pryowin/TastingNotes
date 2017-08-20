@@ -301,6 +301,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="juL-9X-cen" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="24" y="7" width="200" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="color"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="P0i-o6-CPL"/>
                                                         <constraint firstAttribute="width" constant="200" id="lDQ-Ra-8KW"/>
@@ -315,6 +316,7 @@
                                                 </stackView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fJ3-jl-Hf7" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="232" y="7" width="123" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="type"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="HoU-TI-uIV"/>
                                                     </constraints>
@@ -394,6 +396,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmX-pw-sB7" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="122" y="8" width="233" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="appearanceColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="T8Y-G4-bvB"/>
                                                     </constraints>
@@ -430,6 +433,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWx-Qr-1x1" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="122" y="8" width="233" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="appearanceIntensity"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="aiG-Ab-e9n"/>
                                                     </constraints>
@@ -466,6 +470,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pi8-bO-sKH" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="122" y="13" width="233" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="appearanceClarity"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="BAG-dz-a9S"/>
                                                     </constraints>
@@ -542,6 +547,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-hD-YCS" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="7" width="231" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="noseIntensity"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="a7t-uP-CmN"/>
                                                     </constraints>
@@ -654,6 +660,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUC-4J-uga" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="7" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteSweetness"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="V41-Dy-Dh5"/>
                                                     </constraints>
@@ -690,6 +697,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sg8-GU-GAD" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="7" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteAcidity"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="VWx-8j-Ge6"/>
                                                     </constraints>
@@ -726,6 +734,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDj-06-wHi" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="7" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteTannin"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="dYi-G7-s5h"/>
                                                     </constraints>
@@ -762,6 +771,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cZ-9S-yFr" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="7" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteBody"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="BM7-VA-KPJ"/>
                                                     </constraints>
@@ -834,6 +844,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vS-2f-V0t" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="6" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteFinish"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="kFM-TZ-SB3"/>
                                                     </constraints>
@@ -1023,6 +1034,17 @@
                         <outlet property="type" destination="fJ3-jl-Hf7" id="oZS-5G-3ac"/>
                         <outlet property="wineName" destination="QMO-wu-gM0" id="hxl-5n-O3P"/>
                         <outlet property="year" destination="XTL-DW-pNv" id="6KW-oE-CAe"/>
+                        <outletCollection property="searchFields" destination="juL-9X-cen" collectionClass="NSMutableArray" id="xbB-YY-mJJ"/>
+                        <outletCollection property="searchFields" destination="fJ3-jl-Hf7" collectionClass="NSMutableArray" id="WUy-mJ-PT6"/>
+                        <outletCollection property="searchFields" destination="kmX-pw-sB7" collectionClass="NSMutableArray" id="Nq2-0W-fBv"/>
+                        <outletCollection property="searchFields" destination="kWx-Qr-1x1" collectionClass="NSMutableArray" id="Hoh-52-7Bi"/>
+                        <outletCollection property="searchFields" destination="Pi8-bO-sKH" collectionClass="NSMutableArray" id="agP-Tp-e0v"/>
+                        <outletCollection property="searchFields" destination="6TN-hD-YCS" collectionClass="NSMutableArray" id="MhW-zt-M0R"/>
+                        <outletCollection property="searchFields" destination="aUC-4J-uga" collectionClass="NSMutableArray" id="htk-QH-Qdn"/>
+                        <outletCollection property="searchFields" destination="sg8-GU-GAD" collectionClass="NSMutableArray" id="2N9-z1-59L"/>
+                        <outletCollection property="searchFields" destination="XDj-06-wHi" collectionClass="NSMutableArray" id="Jhg-yy-vec"/>
+                        <outletCollection property="searchFields" destination="8cZ-9S-yFr" collectionClass="NSMutableArray" id="ifq-H0-6PD"/>
+                        <outletCollection property="searchFields" destination="5vS-2f-V0t" collectionClass="NSMutableArray" id="haZ-w1-0er"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b13-On-eEM" userLabel="First Responder" sceneMemberID="firstResponder"/>

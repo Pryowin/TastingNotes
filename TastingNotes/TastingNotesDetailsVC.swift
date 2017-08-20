@@ -20,17 +20,13 @@ class TastingNotesDetailsVC: UITableViewController {
     var currencyFormatter: NumberFormatter!
     var backToNumberFormatter: NumberFormatter!
     
-    let sectionTitles = ["Description", "Appearance", "Nose", "Taste", "Conclusion"]
     var sectionShows = [true,true,true,true,true]
-    let rowHeight: CGFloat = 44
-    let sectionHeaderColor = "#e29b0d"
-    let sectionHeaderTextColor = "#574852"
-    let sectionHeaderHeight: CGFloat = 40
-    let sectionHeaderTextWidth = 200
-    let sectionHeaderSpacing = 8
-    let sectionHeaderButtonWidth = 30
-
-    //MARK: - Outlets and Actions
+    
+        //MARK: - Outlets and Actions
+    
+    
+    @IBOutlet var searchFields: [SearchTextField]!
+    
     @IBOutlet var wineName: UITextField!
     @IBOutlet var year: UITextField!
     @IBOutlet var region: UITextField!
@@ -168,40 +164,33 @@ class TastingNotesDetailsVC: UITableViewController {
             rating.rating = Double(note.overallRatiing)
             
         }
-        configureAppearanceColor()
-        configureAppearanceClarity()
-        configureAppearanceIntensity()
-        configureType()
-        configureColor()
-        configureNoseIntensity()
-        configureTasteBody()
-        configureTasteFinish()
-        configureTasteTannin()
-        configureTasteAcidity()
-        configureTasteSweetness()
+        
+        for field in searchFields {
+            if field.accessibilityIdentifier != nil {
+                configureSearchField(field)
+            }
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = UIView()
         
-        headerView.backgroundColor = UIColor.init(hexColor: sectionHeaderColor)
+        headerView.backgroundColor = UIColor.init(hexColor: SectionHeader.color)
         
-        let sectionHeaderTextHeight = sectionHeaderButtonWidth
-        let sectionHeaderButtonHeight = sectionHeaderButtonWidth
-        
-        let verticalOffset = (Int(sectionHeaderHeight) - sectionHeaderButtonWidth) / 2
+        let verticalOffset = (Int(SectionHeader.height) - SectionHeader.buttonWidth) / 2
         
         let sectionTitle = UILabel()
-        sectionTitle.textColor = UIColor.init(hexColor: sectionHeaderTextColor)
+        sectionTitle.textColor = UIColor.init(hexColor: SectionHeader.textColor)
         sectionTitle.text = sectionTitles[section]
-        sectionTitle.frame = CGRect(x: sectionHeaderSpacing,  y: verticalOffset, width: sectionHeaderTextWidth, height: sectionHeaderTextHeight)
+        sectionTitle.frame = CGRect(x: SectionHeader.spacing,  y: verticalOffset, width: SectionHeader.textWidth, height: SectionHeader.textHeight)
         headerView.addSubview(sectionTitle)
         
         let sectionWidth = Int(self.view.frame.width)
-        let buttonX = sectionWidth - sectionHeaderSpacing - sectionHeaderButtonWidth
+        let buttonX = sectionWidth - SectionHeader.spacing - SectionHeader.buttonWidth
         
-        let collapseButton: UIButton = UIButton(frame: CGRect(x: buttonX, y: verticalOffset, width: sectionHeaderButtonWidth, height: sectionHeaderButtonHeight))
+        let collapseButton: UIButton = UIButton(frame: CGRect(x: buttonX, y: verticalOffset, width: SectionHeader.buttonWidth, height: SectionHeader.buttonHeight))
 
         if sectionShows[section] {
             collapseButton.setImage(#imageLiteral(resourceName: "icons8-Slide Up-50"), for: .normal)
@@ -219,7 +208,7 @@ class TastingNotesDetailsVC: UITableViewController {
         return headerView
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return sectionHeaderHeight
+        return SectionHeader.height
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -239,58 +228,16 @@ class TastingNotesDetailsVC: UITableViewController {
     }
     
     //MARK: - Autocomplete functions
-    func setTheme(textField: SearchTextField) {
-        textField.theme.bgColor = UIColor.init(hexColor: sectionHeaderColor)
-        textField.theme.fontColor = .black
+    func configureSearchField(_ field: SearchTextField) {
+        let fieldName = field.accessibilityIdentifier!
+        if autoCompleteValues.keys.contains(fieldName) {
+            field.filterStrings(autoCompleteValues[fieldName]!)
+            field.theme.bgColor = UIColor.init(hexColor: SectionHeader.color)
+            field.theme.fontColor = .black
+        } else {
+            print("\(#function): Unknown Autocomplete key \(fieldName)")
+        }
     }
     
-    func configureAppearanceColor() {
-        appearanceColour.filterStrings(["Amber","Gold","Straw","Pink","Salmon", "Orange", "Purple","Ruby","Garnet","Tawney"])
-        setTheme(textField: appearanceColour)
-    }
-    
-    func configureAppearanceClarity() {
-        appearanceClarity.filterStrings(["Clear","Hazy"])
-        setTheme(textField: appearanceClarity)
-    }
-    
-    func configureAppearanceIntensity() {
-        appearanceIntensity.filterStrings(["Pale","Medium","Deep"])
-        setTheme(textField: appearanceIntensity)
-    }
-    
-    func configureColor () {
-        color.filterStrings(["Red","White","Rosé"])
-        setTheme(textField: color)
-    }
-    
-    func configureType () {
-        type.filterStrings(["Still","Sparkling","Dessert","Port"])
-        setTheme(textField: type)
-    }
-    func configureNoseIntensity () {
-        noseIntensity.filterStrings(["Light","Medium","Prounounced"])
-            setTheme(textField: noseIntensity)
-    }
-    func configureTasteSweetness () {
-        tasteSweetness.filterStrings(["Dry", "Off Dry","Medium","Sweet"])
-        setTheme(textField: tasteSweetness)
-    }
-    func configureTasteAcidity () {
-        tasteAcidity.filterStrings(["Low","Medium","Medium Plus","High" ])
-        setTheme(textField: tasteAcidity)
-    }
-    func configureTasteTannin () {
-        tasteTannin.filterStrings(["Low","Medium","High"])
-        setTheme(textField: tasteTannin)
-    }
-    func configureTasteBody () {
-        tasteBody.filterStrings(["Light","Medium","Full"])
-        setTheme(textField: tasteBody)
-    }
-    func configureTasteFinish () {
-        tasteFinish.filterStrings(["Short", "Medium", "Long"])
-        setTheme(textField: tasteFinish)
-    }
 }
 
