@@ -96,6 +96,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8rn-5T-eJS">
                                 <rect key="frame" x="24" y="109" width="327" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sessionName"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WnV-3Q-Fpr"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="fAE-5P-ohJ"/>
@@ -106,6 +107,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-SL-f00">
                                 <rect key="frame" x="24" y="188" width="327" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sessionLocation"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iha-zy-Zzp"/>
                                 </constraints>
@@ -128,7 +130,7 @@
                                         <rect key="frame" x="0.0" y="28" width="327" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GUe-bV-oAM" id="DMc-Ve-jeT">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQz-0t-cpL">
