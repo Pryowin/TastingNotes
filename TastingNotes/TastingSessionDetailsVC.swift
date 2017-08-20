@@ -145,16 +145,18 @@ class TastingSessionDetailsVC: UIViewController,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-            let notes = sessionStore.notes()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath) as! ShowRatingTVC
+        let notes = sessionStore.notes()
         let note = notes![indexPath.row]
-        cell.textLabel?.text = note.wineName
-        if (note.overallRatiing != 0) {
-            cell.detailTextLabel?.text = String(note.overallRatiing)
-        } else {
-            cell.detailTextLabel?.text = " "
-        }
+        cell.wine.text = note.wineName
         
+        let score = Double(note.overallRatiing)
+        if score == 0 {
+            cell.rating.isHidden = true
+        } else {
+            cell.rating.isHidden = false
+            cell.rating.rating = score
+        }
         
         return cell
     }
