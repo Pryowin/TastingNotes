@@ -21,6 +21,8 @@
 		FDB868311F41FA5600FF18EB /* Grapes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */; };
 		FDBEE4E11F478988002AFD2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E01F478988002AFD2B /* Constants.swift */; };
 		FDBEE4E51F4A271E002AFD2B /* ShowRatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */; };
+		FDBEE4E71F4B7023002AFD2B /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E61F4B7023002AFD2B /* UITestHelper.swift */; };
+		FDBEE4E91F4C74DF002AFD2B /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E81F4C74DF002AFD2B /* TestConstants.swift */; };
 		FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829B1F34114000FB0E6C /* AppDelegate.swift */; };
 		FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */; };
 		FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC1829F1F34114000FB0E6C /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDBEE4E01F478988002AFD2B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRatingTVC.swift; sourceTree = "<group>"; };
+		FDBEE4E61F4B7023002AFD2B /* UITestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
+		FDBEE4E81F4C74DF002AFD2B /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		FDC182981F34113F00FB0E6C /* TastingNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastingNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1829B1F34114000FB0E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingSessionsVC.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */,
+				FDBEE4E61F4B7023002AFD2B /* UITestHelper.swift */,
+				FDBEE4E81F4C74DF002AFD2B /* TestConstants.swift */,
 				FDC182C01F34114000FB0E6C /* Info.plist */,
 			);
 			path = TastingNotesUITests;
@@ -217,6 +223,7 @@
 				FDC182961F34113F00FB0E6C /* Resources */,
 				08D7D91268EA16A7CD25923B /* [CP] Embed Pods Frameworks */,
 				BFDB3A799CD2FF11F3DC9D41 /* [CP] Copy Pods Resources */,
+				FDBEE4EB1F4CF3A7002AFD2B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -281,6 +288,7 @@
 				TargetAttributes = {
 					FDC182971F34113F00FB0E6C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6HF44773WT;
 						ProvisioningStyle = Automatic;
 					};
 					FDC182AE1F34114000FB0E6C = {
@@ -492,6 +500,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TastingNotesUITests/Pods-TastingNotesUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FDBEE4EB1F4CF3A7002AFD2B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -530,6 +551,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */,
+				FDBEE4E91F4C74DF002AFD2B /* TestConstants.swift in Sources */,
+				FDBEE4E71F4B7023002AFD2B /* UITestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +691,7 @@
 			baseConfigurationReference = 025F2EB40EC9478F5256901B /* Pods-TastingNotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				DEVELOPMENT_TEAM = 6HF44773WT;
 				INFOPLIST_FILE = TastingNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotes;
@@ -681,6 +705,7 @@
 			baseConfigurationReference = E96859A1B3B14A3F14AB0698 /* Pods-TastingNotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				DEVELOPMENT_TEAM = 6HF44773WT;
 				INFOPLIST_FILE = TastingNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amberfire.TastingNotes;

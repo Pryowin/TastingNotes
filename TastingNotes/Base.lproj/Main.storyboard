@@ -253,6 +253,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMO-wu-gM0">
                                                     <rect key="frame" x="92" y="7" width="263" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="descriptionName"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="rna-9L-tYM"/>
                                                     </constraints>
@@ -262,6 +263,7 @@
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-DW-pNv">
                                                     <rect key="frame" x="24" y="7" width="60" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="descriptionYear"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="9o5-ej-H8H"/>
                                                         <constraint firstAttribute="width" constant="60" id="PGG-Hp-y5o"/>
@@ -289,6 +291,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Region" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-H5-WV1">
                                                     <rect key="frame" x="24" y="6" width="200" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="descriptionRegion"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="kp1-Qd-DrS"/>
                                                         <constraint firstAttribute="width" constant="200" id="mQW-fM-YM8"/>
@@ -299,6 +302,7 @@
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAY-ny-LHa">
                                                     <rect key="frame" x="232" y="7" width="123" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="descriptionCountry"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="clP-Qr-Jhm"/>
                                                     </constraints>
@@ -531,6 +535,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TVy-JE-R5a" customClass="SearchTextField" customModule="SearchTextField">
                                                     <rect key="frame" x="124" y="13" width="231" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="appearanceNotes"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4st-el-gGT"/>
                                                     </constraints>
@@ -608,6 +613,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xji-57-akM">
                                                     <rect key="frame" x="124" y="7" width="231" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="noseAromas"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="tnE-Gp-Doi"/>
                                                     </constraints>
@@ -644,6 +650,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-7E-XKK">
                                                     <rect key="frame" x="124" y="7" width="231" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="noseNotes"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4aL-j3-y0m"/>
                                                     </constraints>
@@ -832,6 +839,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xGN-wP-6dZ">
                                                     <rect key="frame" x="124" y="6" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteFlavor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="wp9-RT-g2Y"/>
                                                     </constraints>
@@ -905,6 +913,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EgR-48-u4O">
                                                     <rect key="frame" x="124" y="7" width="223" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="tasteNotes"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Nuw-nn-vUH"/>
                                                     </constraints>
@@ -946,6 +955,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CL4-bs-30L">
                                                     <rect key="frame" x="124" y="7" width="221" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="summary"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="zCW-C8-h8T"/>
                                                     </constraints>
@@ -962,6 +972,7 @@
                                                 <constraint firstItem="mBK-vL-Rgf" firstAttribute="centerY" secondItem="ML3-IC-qJI" secondAttribute="centerY" id="scH-en-46B"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="conclusionSummary"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XCY-sJ-7aY">
                                         <rect key="frame" x="0.0" y="976" width="375" height="44"/>
@@ -983,6 +994,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UC-Sy-pOQ" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="128" y="7" width="217" height="30"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="rating"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="ewn-TJ-Eaw"/>
                                                     </constraints>

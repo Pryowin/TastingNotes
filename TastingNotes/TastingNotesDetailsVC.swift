@@ -13,17 +13,16 @@ import Cosmos
 
 class TastingNotesDetailsVC: UITableViewController {
     
-    //MARK: - Variables
+    // MARK: - Variables
     
     var sessionStore: TastingSessionStore!
     var editMode: Bool!
     var currencyFormatter: NumberFormatter!
     var backToNumberFormatter: NumberFormatter!
     
-    var sectionShows = [true,true,true,true,true]
+    var sectionShows = [true, true, true, true, true]
     
-        //MARK: - Outlets and Actions
-    
+    // MARK: - Outlets and Actions
     
     @IBOutlet var searchFields: [SearchTextField]!
     
@@ -79,13 +78,13 @@ class TastingNotesDetailsVC: UITableViewController {
         dismiss(animated: true, completion: nil)
         
     }
-    func pressed(sender: UIButton!){
+    func pressed(sender: UIButton!) {
         let section = sender.tag
         sectionShows[section] = !sectionShows[section]
         self.tableView.reloadData()
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     func saveFields(_ note: TastingNotes) {
         note.wineName = wineName.text
         note.vintage = Int16(year.text!)!
@@ -121,7 +120,7 @@ class TastingNotesDetailsVC: UITableViewController {
         note.overallRatiing = Int16(Int(rating.rating))
     }
     
-    //MARK: - View Overrides
+    // MARK: - View Overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,10 +164,8 @@ class TastingNotesDetailsVC: UITableViewController {
             
         }
         
-        for field in searchFields {
-            if field.accessibilityIdentifier != nil {
+        for field in searchFields  where field.accessibilityIdentifier != nil {
                 configureSearchField(field)
-            }
         }
         
     }
@@ -184,7 +181,7 @@ class TastingNotesDetailsVC: UITableViewController {
         let sectionTitle = UILabel()
         sectionTitle.textColor = UIColor.init(hexColor: SectionHeader.textColor)
         sectionTitle.text = sectionTitles[section]
-        sectionTitle.frame = CGRect(x: SectionHeader.spacing,  y: verticalOffset, width: SectionHeader.textWidth, height: SectionHeader.textHeight)
+        sectionTitle.frame = CGRect(x: SectionHeader.spacing, y: verticalOffset, width: SectionHeader.textWidth, height: SectionHeader.textHeight)
         headerView.addSubview(sectionTitle)
         
         let sectionWidth = Int(self.view.frame.width)
@@ -227,7 +224,7 @@ class TastingNotesDetailsVC: UITableViewController {
         self.tableView.reloadData()
     }
     
-    //MARK: - Autocomplete functions
+    // MARK: - Autocomplete functions
     func configureSearchField(_ field: SearchTextField) {
         let fieldName = field.accessibilityIdentifier!
         if autoCompleteValues.keys.contains(fieldName) {
@@ -240,4 +237,3 @@ class TastingNotesDetailsVC: UITableViewController {
     }
     
 }
-

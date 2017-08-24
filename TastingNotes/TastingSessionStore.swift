@@ -17,15 +17,32 @@ class TastingSessionStore: NSObject {
        
     let persitentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TastingNotes")
-        container.loadPersistentStores {(description, error) in
+        container.loadPersistentStores {(_, error) in
             if let error = error {
                 print("Error in setting up Core Data /(error)")
             }
         }
         return container
     } ()
-    
-    override init() {
+   
+    let setUpInMemoryManagedObjectContext: NSManagedObjectContext = {
+        let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main])!
+        
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        
+        do {
+            try persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType, configurationName: nil, at: nil, options: nil)
+        } catch {
+            print("Adding in-memory persistent store failed")
+        }
+        
+        let managedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
+        managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        
+        return managedObjectContext
+    } ()
+
+    init(testmode: Bool) {
         
         selectedRecord = IndexPath.init(row:0, section: 0)
         selectedNote = IndexPath.init(row: 0, section: 0)
@@ -34,7 +51,13 @@ class TastingSessionStore: NSObject {
         let dateSort = NSSortDescriptor(key: "sessionDate", ascending: false)
         request.sortDescriptors = [dateSort]
         
-        let moc = self.persitentContainer.viewContext
+        var moc: NSManagedObjectContext
+        if testmode {
+            moc = setUpInMemoryManagedObjectContext
+        } else {
+            moc = self.persitentContainer.viewContext
+        }
+        
         frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         
         do {
@@ -44,11 +67,14 @@ class TastingSessionStore: NSObject {
         }
         
     }
+    convenience override init() {
+        self.init(testmode: false)
+    }
+    
     func notes() -> [TastingNotes]? {
         
             return (self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes])
     }
-    
     
     func save() {
         

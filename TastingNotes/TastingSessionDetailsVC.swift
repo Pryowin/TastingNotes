@@ -9,11 +9,10 @@
 import UIKit
 import CoreData
 
-
 class TastingSessionDetailsVC: UIViewController,
                                 UITextFieldDelegate,
                                 UITableViewDelegate,
-                                UITableViewDataSource{
+                                UITableViewDataSource {
 
     // MARK: - Variables
     
@@ -56,7 +55,6 @@ class TastingSessionDetailsVC: UIViewController,
         }
     }
     
-    
     @IBAction func addNotes(_ sender: UIButton) {
         performSegue(withIdentifier: segueName, sender: sender)
     }
@@ -80,10 +78,8 @@ class TastingSessionDetailsVC: UIViewController,
         let formatters = Formatters()
         dateFormatter = formatters.dateFormatter
         
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
         
         // Init fields based on editing mode
         if editMode {
@@ -105,7 +101,7 @@ class TastingSessionDetailsVC: UIViewController,
         tableView.reloadData()
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     func dismissKeyboard () {
         view.endEditing(true)
@@ -113,11 +109,11 @@ class TastingSessionDetailsVC: UIViewController,
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navController = segue.destination as! UINavigationController
-        switch segue.identifier{
+        switch segue.identifier {
         case segueName?:
             let sessionNotesController = navController.topViewController as! TastingNotesDetailsVC
             sessionNotesController.sessionStore = sessionStore
-            if (sender != nil) {
+            if sender != nil {
                 sessionNotesController.editMode = false
             } else {
                 sessionNotesController.editMode = true
@@ -127,7 +123,7 @@ class TastingSessionDetailsVC: UIViewController,
         }
     }
     
-    //MARK: - Data Source functions
+    // MARK: - Data Source functions
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -176,12 +172,10 @@ class TastingSessionDetailsVC: UIViewController,
         performSegue(withIdentifier: segueName, sender: nil)
     }
     
-    //MARK: - Delegate Functions
+    // MARK: - Delegate Functions
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-   
-     
 }

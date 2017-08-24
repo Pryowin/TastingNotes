@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension TastingSession {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<TastingSession> {

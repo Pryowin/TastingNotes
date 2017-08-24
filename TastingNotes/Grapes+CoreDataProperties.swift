@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Grapes {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Grapes> {

@@ -10,11 +10,9 @@ import UIKit
 import CoreData
 
 class FetchedResultsControllerDelegate {
-   
     var tableView: UITableView!
-    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch (type) {
+        switch type {
         case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
@@ -28,7 +26,7 @@ class FetchedResultsControllerDelegate {
                 tableView.reloadRows(at: [indexPath], with: .automatic)
             }
         default:
-            break;
+            break
         }
     }
 }

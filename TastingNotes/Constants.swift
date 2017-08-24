@@ -25,22 +25,15 @@ struct SectionHeader {
 }
 
 let autoCompleteValues = [
-    "color": ["Red","White","Rosé"],
-    "type": ["Still","Sparkling","Dessert","Port"],
-    "appearanceColor" : ["Amber","Gold","Straw","Pink","Salmon", "Orange", "Purple","Ruby","Garnet","Tawney"],
-    "appearanceClarity" : ["Clear","Hazy"],
-    "appearanceIntensity" : ["Pale","Medium","Deep"],
-    "noseIntensity" : ["Light","Medium","Prounounced"],
-    "tasteSweetness" : ["Dry", "Off Dry","Medium","Sweet"],
-    "tasteAcidity" : ["Low","Medium","Medium Plus","High" ],
-    "tasteTannin" : ["Low","Medium","High"],
-    "tasteBody" : ["Light","Medium","Full"],
-    "tasteFinish" : ["Short", "Medium", "Long"]
-    
-    
-
+    "color": ["Red", "White", "Rosé"],
+    "type": ["Still", "Sparkling", "Dessert", "Port"],
+    "appearanceColor": ["Amber", "Gold", "Straw", "Pink", "Salmon", "Orange", "Purple", "Ruby", "Garnet", "Tawney"],
+    "appearanceClarity": ["Clear", "Hazy"],
+    "appearanceIntensity": ["Pale", "Medium", "Deep"],
+    "noseIntensity": ["Light", "Medium", "Prounounced"],
+    "tasteSweetness": ["Dry", "Off Dry", "Medium", "Sweet"],
+    "tasteAcidity": ["Low", "Medium", "Medium Plus", "High" ],
+    "tasteTannin": ["Low", "Medium", "High"],
+    "tasteBody": ["Light", "Medium", "Full"],
+    "tasteFinish": ["Short", "Medium", "Long"]
 ]
-
-
-
-

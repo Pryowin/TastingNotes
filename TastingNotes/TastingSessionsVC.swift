@@ -41,11 +41,11 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navController = segue.destination as! UINavigationController
-        switch segue.identifier{
+        switch segue.identifier {
         case "showSessionDetails"?:
             let sessionDetailController = navController.topViewController as! TastingSessionDetailsVC
             sessionDetailController.sessionStore = sessionStore
-            if (sender != nil) {
+            if sender != nil {
                 sessionDetailController.editMode = false
             } else {
                 sessionDetailController.editMode = true
@@ -54,7 +54,6 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
             preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
         }
     }
-    
     
     // MARK: - Data Source Overrides
     
@@ -86,12 +85,17 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            sessionStore.delete(recordToDelete: indexPath)
+            sessionStore.selectedRecord = indexPath
+            if sessionStore.notes()?.count == 0 {
+                sessionStore.delete(recordToDelete: indexPath)
+            } else {
+               confirmDelete()
+            }
         }
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch (type) {
+        switch type {
         case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
@@ -105,9 +109,27 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
                 tableView.reloadRows(at: [indexPath], with: .automatic)
             }
         default:
-            break;
+            break
         }
+    }
+    
+    // MARK: - Other Functions
+    
+    func confirmDelete () {
+        
+        let alert = UIAlertController(title: "Delete", message: "Session has tasting notes attached. Do you want to remove the session and all of its associated notes?", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let deleteAction = UIAlertAction(title: "OK", style: .destructive) {_ in
+               self.sessionStore.delete(recordToDelete: self.sessionStore.selectedRecord)
+        }
+        
+        alert.addAction(defaultAction)
+        alert.addAction(deleteAction)
+        present(alert, animated: true, completion: nil)
+        
+        self.tableView.isEditing = false
     }
 
 }
-
