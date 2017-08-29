@@ -10,6 +10,9 @@
 		220DFFD2261C1A85AB3F1EB3 /* Pods_TastingNotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */; };
 		9BB37AF3AC096F7297E09DCC /* Pods_TastingNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D0BACC200476B554AB5F14 /* Pods_TastingNotesTests.framework */; };
 		B43E8C6846B1B1F355031E31 /* Pods_TastingNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFEBCD83ABC9B40B8DEC7BA /* Pods_TastingNotes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FD3122811F536A1900EC8AE0 /* TastingSessionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */; };
+		FD3122831F5372BC00EC8AE0 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3122821F5372BC00EC8AE0 /* TestHelper.swift */; };
+		FD3122851F54EC1800EC8AE0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3122841F54EC1800EC8AE0 /* Store.swift */; };
 		FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */; };
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */; };
@@ -32,6 +35,7 @@
 		FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */; };
 		FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */; };
 		FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */; };
+		FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD668D71F4FC280000CE92F /* GrapeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,9 @@
 		E96859A1B3B14A3F14AB0698 /* Pods-TastingNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TastingNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-TastingNotes/Pods-TastingNotes.release.xcconfig"; sourceTree = "<group>"; };
 		F641844D04BD7842798C640F /* Pods-TastingNotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TastingNotesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TastingNotesUITests/Pods-TastingNotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6D0BACC200476B554AB5F14 /* Pods_TastingNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStoreTests.swift; sourceTree = "<group>"; };
+		FD3122821F5372BC00EC8AE0 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		FD3122841F54EC1800EC8AE0 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStore.swift; sourceTree = "<group>"; };
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsVC.swift; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 		FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNotesUITests.swift; sourceTree = "<group>"; };
 		FDC182C01F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDD668D71F4FC280000CE92F /* GrapeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeStore.swift; sourceTree = "<group>"; };
 		FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,7 +181,9 @@
 				FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */,
 				FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */,
 				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
+				FD3122841F54EC1800EC8AE0 /* Store.swift */,
 				FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */,
+				FDD668D71F4FC280000CE92F /* GrapeStore.swift */,
 				FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */,
 				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */,
@@ -194,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */,
+				FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */,
+				FD3122821F5372BC00EC8AE0 /* TestHelper.swift */,
 				FDC182B51F34114000FB0E6C /* Info.plist */,
 			);
 			path = TastingNotesTests;
@@ -527,8 +539,10 @@
 				FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */,
 				FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
+				FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */,
 				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
 				FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */,
+				FD3122851F54EC1800EC8AE0 /* Store.swift in Sources */,
 				FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */,
 				FDB868271F41F04100FF18EB /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDBEE4E11F478988002AFD2B /* Constants.swift in Sources */,
@@ -542,7 +556,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3122831F5372BC00EC8AE0 /* TestHelper.swift in Sources */,
 				FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */,
+				FD3122811F536A1900EC8AE0 /* TastingSessionStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

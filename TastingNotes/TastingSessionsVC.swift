@@ -64,7 +64,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sessionStore.frc.fetchedObjects!.count
+        return sessionStore.sessionCount()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,7 +87,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         if editingStyle == .delete {
             sessionStore.selectedRecord = indexPath
             if sessionStore.notes()?.count == 0 {
-                sessionStore.delete(recordToDelete: indexPath)
+                sessionStore.delete()
             } else {
                confirmDelete()
             }
@@ -122,7 +122,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         let defaultAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         let deleteAction = UIAlertAction(title: "OK", style: .destructive) {_ in
-               self.sessionStore.delete(recordToDelete: self.sessionStore.selectedRecord)
+               self.sessionStore.delete()
         }
         
         alert.addAction(defaultAction)

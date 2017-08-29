@@ -35,16 +35,14 @@ class TastingSessionDetailsVC: UIViewController,
    
     @IBAction func save(_ sender: UIBarButtonItem) {
         
-        let context = sessionStore.frc.managedObjectContext
-        
         if editMode {
-            let updateSession = sessionStore.frc.object(at: sessionStore.selectedRecord)
+            let updateSession = sessionStore.session()
             updateSession.sessionName = sessionName.text
             updateSession.sessionLocation = sessionLocation.text
             sessionStore.save()
             dismiss(animated: true, completion: nil)
         } else {
-            let addSession = TastingSession(context: context)
+            let addSession = sessionStore.sessionToAdd()
             addSession.sessionDate = dateCreated
             addSession.sessionId = UUID() as NSUUID
             addSession.sessionName = sessionName.text
@@ -159,7 +157,7 @@ class TastingSessionDetailsVC: UIViewController,
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
+            let session = sessionStore.session()
             let notes = sessionStore.notes()
             let note = notes![indexPath.row]
             session.removeFromNotes(note)

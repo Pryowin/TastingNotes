@@ -71,22 +71,49 @@ class TastingSessionStore: NSObject {
         self.init(testmode: false)
     }
     
+    func sessionCount () -> Int {
+
+        return self.frc.fetchedObjects!.count
+    }
+    
+    func session () -> TastingSession {
+        return self.frc.object(at: self.selectedRecord)
+    }
+    
+    func sessionToAdd () -> TastingSession {
+        return TastingSession(context: self.frc.managedObjectContext)
+    }
+    
+    func newNote () -> TastingNotes {
+        return TastingNotes(context: self.frc.managedObjectContext)
+    }
+    
+    func addToNotes (_ note: TastingNotes) {
+        self.frc.object(at: self.selectedRecord).addToNotes(note)
+    }
+    
     func notes() -> [TastingNotes]? {
         
             return (self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes])
+    }
+    
+    func note() -> TastingNotes {
+        return self.notes()![self.selectedNote.row]
     }
     
     func save() {
         
         do {
             try self.frc.managedObjectContext.save()
+            try frc.performFetch()
         } catch let error {
             fatalError("Unable to save \(error)")
         }
     }
-    func delete(recordToDelete: IndexPath) {
+   
+    func delete() {
         let context = self.frc.managedObjectContext
-        let session = self.frc.object(at: recordToDelete) as NSManagedObject!
+        let session = self.frc.object(at: self.selectedRecord) as NSManagedObject!
         context.delete(session!)
         self.save()
     }

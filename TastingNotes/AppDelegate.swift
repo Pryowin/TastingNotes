@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         tableViewController.sessionStore = tastingSessionsStore
         tableViewController.sessionStore.frc.delegate = tableViewController
+        
+        let _ = GrapeStore()
        
         return true
     }

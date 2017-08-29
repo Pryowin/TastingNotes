@@ -19,6 +19,7 @@ class TastingNotesDetailsVC: UITableViewController {
     var editMode: Bool!
     var currencyFormatter: NumberFormatter!
     var backToNumberFormatter: NumberFormatter!
+    var priceOfWine: Decimal = 0
     
     var sectionShows = [true, true, true, true, true]
     
@@ -37,6 +38,7 @@ class TastingNotesDetailsVC: UITableViewController {
     @IBAction func priceEditingEnded(_ sender: Any) {
         let num = Decimal.init(string: price.text!) as NSNumber!
         price.text = currencyFormatter.string(from: num!)
+        priceOfWine = num as! Decimal
     }
     @IBOutlet var appearanceColour: SearchTextField!
     @IBOutlet var appearanceClarity: SearchTextField!
@@ -65,13 +67,12 @@ class TastingNotesDetailsVC: UITableViewController {
     @IBAction func save(_ sender: Any) {
         
         if editMode {
-            let notes = sessionStore.notes()
-            let note = notes![sessionStore.selectedNote.row]
+            let note = sessionStore.note()
             saveFields(note)
         } else {
-            let note = TastingNotes(context: sessionStore.frc.managedObjectContext)
+            let note = sessionStore.newNote()
             saveFields(note)
-            sessionStore.frc.object(at: sessionStore.selectedRecord).addToNotes(note)
+            sessionStore.addToNotes(note)
         }
         
         sessionStore.save()
@@ -87,7 +88,9 @@ class TastingNotesDetailsVC: UITableViewController {
     // MARK: - Functions
     func saveFields(_ note: TastingNotes) {
         note.wineName = wineName.text
-        note.vintage = Int16(year.text!)!
+        if let vintage = Int16(year.text!) {
+                note.vintage = vintage
+        }
         note.region = region.text
         note.country = country.text
         note.colour = color.text
@@ -96,7 +99,7 @@ class TastingNotesDetailsVC: UITableViewController {
         if let number = Decimal.init(string: price.text!) {
             note.price = number as NSDecimalNumber
         } else {
-            note.price = 0
+            note.price = priceOfWine as NSDecimalNumber
         }
         
         note.appearanceColour = appearanceColour.text
@@ -134,7 +137,9 @@ class TastingNotesDetailsVC: UITableViewController {
             let notes = sessionStore.notes()
             let note = notes![sessionStore.selectedNote.row]
             wineName.text = note.wineName
-            year.text = "\(note.vintage)"
+            if note.vintage != 0 {
+                year.text = "\(note.vintage)"
+            }
             color.text = note.colour
             region.text = note.region
             country.text = note.country
