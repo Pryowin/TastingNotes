@@ -12,11 +12,14 @@ import XCTest
 class TastingNotesTests: XCTestCase {
     
     var sessionStore: TastingSessionStore!
+    var grapeStore: GrapeStore!
     
     override func setUp() {
         super.setUp()
         
-        sessionStore = TastingSessionStore(testmode: true)
+        let store = TastingNotesManagedObjectContext(testmode: true)
+        sessionStore = TastingSessionStore(usingManagedObjectContext: store.moc)
+        grapeStore = GrapeStore(usingManagedObjectContext: store.moc)
     }
     
     override func tearDown() {

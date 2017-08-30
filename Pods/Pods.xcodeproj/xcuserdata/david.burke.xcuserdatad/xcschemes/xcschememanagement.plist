@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CSV.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Cosmos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2B1EA5A09E369683E627071C59202B84</key>
+		<key>3F28FA85B95AF5E291851255B6EB8C12</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81D83F8E11EB3A72D40090A58F05C3FA</key>
+		<key>701D4F02FAA85F5DE4F688FC7C082624</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BBAD9C940D90DA816C537A060D241585</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFC562731F95DE3DF0FD5086983B51DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -19,12 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let testMode = ProcessInfo().arguments.contains("UI Test")
         let navController = window!.rootViewController as! UINavigationController
         let tableViewController = navController.topViewController as! TastingSessionsVC
-        let tastingSessionsStore = TastingSessionStore(testmode: testMode)
-       
+        let tastingNotesMoc = TastingNotesManagedObjectContext(testmode: testMode)
+        let tastingSessionsStore = TastingSessionStore(usingManagedObjectContext: tastingNotesMoc.moc)
         tableViewController.sessionStore = tastingSessionsStore
         tableViewController.sessionStore.frc.delegate = tableViewController
         
-        let _ = GrapeStore()
+        let grapeStore = GrapeStore(usingManagedObjectContext: tastingNotesMoc.moc)
+        if grapeStore.count() == 0 {
+            grapeStore.importCSV()
+        }
        
         return true
     }

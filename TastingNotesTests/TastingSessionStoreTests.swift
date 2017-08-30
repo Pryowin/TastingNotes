@@ -12,21 +12,21 @@ import XCTest
 extension TastingNotesTests {
     
     func testAdd () {
-        XCTAssertEqual(sessionStore.sessionCount(), 0)
+        XCTAssertEqual(sessionStore.count(), 0)
         saveSession ()
-        XCTAssertEqual(sessionStore.sessionCount(), 1)
+        XCTAssertEqual(sessionStore.count(), 1)
     }
     
     func testUpdate () {
         saveSession()
-        XCTAssertEqual(sessionStore.sessionCount(), 1)
+        XCTAssertEqual(sessionStore.count(), 1)
         var index = IndexPath.init(row: 0, section: 0)
         sessionStore.selectedRecord = index
         var session = sessionStore.session()
         session.sessionName = "Session 2"
         sessionStore.save()
         saveSession()
-        XCTAssertEqual(sessionStore.sessionCount(), 2)
+        XCTAssertEqual(sessionStore.count(), 2)
         index = IndexPath.init(row: 1, section: 0)
         sessionStore.selectedRecord = index
         session = sessionStore.session()
@@ -35,11 +35,11 @@ extension TastingNotesTests {
     }
     func testDelete () {
         saveSession()
-        XCTAssertEqual(sessionStore.sessionCount(), 1)
+        XCTAssertEqual(sessionStore.count(), 1)
         let index = IndexPath.init(row: 0, section: 0)
         sessionStore.selectedRecord = index
         sessionStore.delete()
-        XCTAssertEqual(sessionStore.sessionCount(), 0)
+        XCTAssertEqual(sessionStore.count(), 0)
     }
     func testAddNotes () {
         saveSession()
@@ -49,6 +49,20 @@ extension TastingNotesTests {
         let note = sessionStore.newNote()
         note.wineName = "Wine Name"
         sessionStore.addToNotes(note)
+        XCTAssertEqual(sessionStore.notes()!.count, 1)
+    }
+    func testDeleteNotes () {
+        saveSession()
+        let firstNoteName = "Wine Name"
+        let secondNoteName = "Wine Name 2"
+        addNotes(firstNoteName)
+        addNotes(secondNoteName)
+        let session = sessionStore.session()
+        let notes = sessionStore.notes()
+        let index = IndexPath.init(row: 0, section: 0)
+        let note = notes![index.row]
+        XCTAssertEqual(note.wineName, firstNoteName)
+        session.removeFromNotes(note)
         XCTAssertEqual(sessionStore.notes()!.count, 1)
     }
 }

@@ -64,7 +64,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return sessionStore.sessionCount()
+        return sessionStore.count()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

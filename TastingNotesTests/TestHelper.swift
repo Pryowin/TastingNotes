@@ -19,4 +19,20 @@ extension TastingNotesTests {
         addSession.sessionLocation = "Location"
         sessionStore.save()
     }
+    
+    func addNotes (_ wineName: String) {
+        let index = IndexPath.init(row: 0, section: 0)
+        sessionStore.selectedRecord = index
+        let note = sessionStore.newNote()
+        note.wineName = wineName
+        sessionStore.addToNotes(note)
+    }
+    
+    func addGrapes() {
+        let addGrapes = grapeStore.grapeToAdd()
+        addGrapes.grape = "Pinot Noir"
+        addGrapes.type = "Red"
+        addGrapes.common = 1
+        grapeStore.save()
+    }
 }
