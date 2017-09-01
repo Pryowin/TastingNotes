@@ -14,6 +14,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
     // MARK: - Variables
    
     var sessionStore: TastingSessionStore!
+    var grapeStore: GrapeStore!
     var dateFormatter: DateFormatter!
 
     // MARK: - View Overrides
@@ -45,6 +46,7 @@ class TastingSessionsVC: UITableViewController, NSFetchedResultsControllerDelega
         case "showSessionDetails"?:
             let sessionDetailController = navController.topViewController as! TastingSessionDetailsVC
             sessionDetailController.sessionStore = sessionStore
+            sessionDetailController.grapeStore = grapeStore
             if sender != nil {
                 sessionDetailController.editMode = false
             } else {

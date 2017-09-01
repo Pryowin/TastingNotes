@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if grapeStore.count() == 0 {
             grapeStore.importCSV()
         }
-       
+        tableViewController.grapeStore = grapeStore
         return true
     }
 

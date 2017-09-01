@@ -16,6 +16,7 @@ class TastingNotesDetailsVC: UITableViewController {
     // MARK: - Variables
     
     var sessionStore: TastingSessionStore!
+    var grapeStore: GrapeStore!
     var editMode: Bool!
     var currencyFormatter: NumberFormatter!
     var backToNumberFormatter: NumberFormatter!
@@ -227,6 +228,16 @@ class TastingNotesDetailsVC: UITableViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
        
         self.tableView.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navController = segue.destination as! UINavigationController
+        switch segue.identifier {
+        case "showGrapes"?:
+            let grapeController = navController.topViewController as! GrapeVC
+            grapeController.grapeStore = grapeStore
+        default:
+             preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
+        }
     }
     
     // MARK: - Autocomplete functions

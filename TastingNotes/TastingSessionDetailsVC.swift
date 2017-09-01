@@ -18,6 +18,7 @@ class TastingSessionDetailsVC: UIViewController,
     
     var editMode: Bool!
     var sessionStore: TastingSessionStore!
+    var grapeStore: GrapeStore!
     var dateFormatter: DateFormatter!
     var dateCreated: NSDate!
     
@@ -111,6 +112,7 @@ class TastingSessionDetailsVC: UIViewController,
         case segueName?:
             let sessionNotesController = navController.topViewController as! TastingNotesDetailsVC
             sessionNotesController.sessionStore = sessionStore
+            sessionNotesController.grapeStore = grapeStore
             if sender != nil {
                 sessionNotesController.editMode = false
             } else {
