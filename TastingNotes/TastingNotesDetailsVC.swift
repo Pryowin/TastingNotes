@@ -234,7 +234,15 @@ class TastingNotesDetailsVC: UITableViewController {
         switch segue.identifier {
         case "showGrapes"?:
             let grapeController = navController.topViewController as! GrapeVC
-            grapeController.grapeStore = grapeStore
+            grapeController.grapeStore = self.grapeStore
+            let grapeTableView = GrapeTableView()
+            let selectedGrapeTableView = SelectedGrapeTableView()
+            grapeTableView.grapeStore = self.grapeStore
+            grapeTableView.sessionStore = self.sessionStore
+            grapeController.grapeTableView = grapeTableView
+            grapeController.selectedGrapeTableView = selectedGrapeTableView
+            selectedGrapeTableView.sessionStore = self.sessionStore
+            selectedGrapeTableView.grapeStore = self.grapeStore
         default:
              preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
         }

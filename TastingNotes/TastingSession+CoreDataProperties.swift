@@ -2,7 +2,7 @@
 //  TastingSession+CoreDataProperties.swift
 //  TastingNotes
 //
-//  Created by David Burke on 8/14/17.
+//  Created by David Burke on 9/4/17.
 //  Copyright © 2017 amberfire. All rights reserved.
 //
 

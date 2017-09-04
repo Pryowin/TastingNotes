@@ -59,6 +59,13 @@ class TastingSessionStore: NSObject, Store {
         return self.notes()![self.selectedNote.row]
     }
     
+    func selectedGrapes() -> [Percentages] {
+        return self.note().hasInIt?.allObjects as! [Percentages]
+    }
+    func grapesForNote() -> [Percentages] {
+        return  self.note().hasInIt?.allObjects as! [Percentages]
+    }
+    
     func recordToDelete() -> NSManagedObject! {
         return self.frc.object(at: self.selectedRecord) as NSManagedObject!
     }

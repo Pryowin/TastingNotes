@@ -14,10 +14,12 @@ class GrapeStore: NSObject, Store {
     
     var frc: NSFetchedResultsController<Grapes>
     var selectedRecord: IndexPath
+    let mananagedObjectContext: NSManagedObjectContext!
     
     init(usingManagedObjectContext moc: NSManagedObjectContext) {
         
         selectedRecord = IndexPath.init(row:0, section: 0)
+        mananagedObjectContext = moc
         
         let request: NSFetchRequest<Grapes> = Grapes.fetchRequest()
         let commonSort = NSSortDescriptor(key: "common", ascending: false)
@@ -38,6 +40,28 @@ class GrapeStore: NSObject, Store {
     
     func recordToDelete() -> NSManagedObject! {
         return self.frc.object(at: self.selectedRecord) as NSManagedObject!
+    }
+    
+    func isLinkedToNote(_ note: TastingNotes) -> Bool {
+        var isLinked: Bool = false
+        let grape = self.frc.object(at: self.selectedRecord)
+        for pc in note.hasInIt! {
+            let percent = pc as! Percentages
+            if percent.grapes == grape {
+                isLinked = true
+            }
+        }
+        return isLinked
+    }
+    
+    func linkToNote(_ note: TastingNotes) {
+        let grape = self.frc.object(at: self.selectedRecord)
+        let percentage = Percentages.init(entity: NSEntityDescription.entity(forEntityName: "Percentages", in: mananagedObjectContext)!, insertInto: mananagedObjectContext)
+        percentage.percentage = 0
+        percentage.grape = grape.grape
+        grape.addToIsPresentAt(percentage)
+        note.addToHasInIt(percentage)
+        self.save()
     }
     
     func importCSV () {

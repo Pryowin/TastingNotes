@@ -2,7 +2,7 @@
 //  Grapes+CoreDataProperties.swift
 //  TastingNotes
 //
-//  Created by David Burke on 8/14/17.
+//  Created by David Burke on 9/4/17.
 //  Copyright © 2017 amberfire. All rights reserved.
 //
 
@@ -15,26 +15,26 @@ extension Grapes {
         return NSFetchRequest<Grapes>(entityName: "Grapes")
     }
 
+    @NSManaged public var common: Int16
     @NSManaged public var grape: String?
     @NSManaged public var type: String?
-    @NSManaged public var common: Int16
-    @NSManaged public var percentages: NSSet?
+    @NSManaged public var isPresentAt: NSSet?
 
 }
 
-// MARK: Generated accessors for percentages
+// MARK: Generated accessors for isPresentAt
 extension Grapes {
 
-    @objc(addPercentagesObject:)
-    @NSManaged public func addToPercentages(_ value: Percentages)
+    @objc(addIsPresentAtObject:)
+    @NSManaged public func addToIsPresentAt(_ value: Percentages)
 
-    @objc(removePercentagesObject:)
-    @NSManaged public func removeFromPercentages(_ value: Percentages)
+    @objc(removeIsPresentAtObject:)
+    @NSManaged public func removeFromIsPresentAt(_ value: Percentages)
 
-    @objc(addPercentages:)
-    @NSManaged public func addToPercentages(_ values: NSSet)
+    @objc(addIsPresentAt:)
+    @NSManaged public func addToIsPresentAt(_ values: NSSet)
 
-    @objc(removePercentages:)
-    @NSManaged public func removeFromPercentages(_ values: NSSet)
+    @objc(removeIsPresentAt:)
+    @NSManaged public func removeFromIsPresentAt(_ values: NSSet)
 
 }

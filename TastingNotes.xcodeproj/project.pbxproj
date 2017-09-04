@@ -17,15 +17,17 @@
 		FD31228B1F5640C900EC8AE0 /* Grapes.csv in Resources */ = {isa = PBXBuildFile; fileRef = FD31228A1F5640C900EC8AE0 /* Grapes.csv */; };
 		FD31228D1F56FDD000EC8AE0 /* GrapeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31228C1F56FDD000EC8AE0 /* GrapeStoreTests.swift */; };
 		FD31228F1F59A00000EC8AE0 /* GrapeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */; };
+		FD379C061F5A211100231AD0 /* GrapeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C051F5A211100231AD0 /* GrapeTableView.swift */; };
+		FD379C081F5A2FA800231AD0 /* SelectedGrapeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C071F5A2FA800231AD0 /* SelectedGrapeTableView.swift */; };
+		FD379C141F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */; };
+		FD379C161F5E090900231AD0 /* Grapes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C151F5E090900231AD0 /* Grapes+CoreDataProperties.swift */; };
 		FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */; };
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */; };
 		FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */; };
 		FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */; };
 		FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */; };
-		FDB868271F41F04100FF18EB /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB868241F41F04100FF18EB /* TastingSession+CoreDataProperties.swift */; };
 		FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */; };
-		FDB868311F41FA5600FF18EB /* Grapes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */; };
 		FDBEE4E11F478988002AFD2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E01F478988002AFD2B /* Constants.swift */; };
 		FDBEE4E51F4A271E002AFD2B /* ShowRatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */; };
 		FDBEE4E71F4B7023002AFD2B /* UITestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEE4E61F4B7023002AFD2B /* UITestHelper.swift */; };
@@ -75,15 +77,17 @@
 		FD31228A1F5640C900EC8AE0 /* Grapes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Grapes.csv; sourceTree = "<group>"; };
 		FD31228C1F56FDD000EC8AE0 /* GrapeStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeStoreTests.swift; sourceTree = "<group>"; };
 		FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeVC.swift; sourceTree = "<group>"; };
+		FD379C051F5A211100231AD0 /* GrapeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeTableView.swift; sourceTree = "<group>"; };
+		FD379C071F5A2FA800231AD0 /* SelectedGrapeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedGrapeTableView.swift; sourceTree = "<group>"; };
+		FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FD379C151F5E090900231AD0 /* Grapes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStore.swift; sourceTree = "<group>"; };
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsVC.swift; sourceTree = "<group>"; };
 		FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
 		FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingNotesDetailsVC.swift; sourceTree = "<group>"; };
-		FDB868241F41F04100FF18EB /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDBEE4E01F478988002AFD2B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRatingTVC.swift; sourceTree = "<group>"; };
 		FDBEE4E61F4B7023002AFD2B /* UITestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestHelper.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */,
 				FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */,
 				FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */,
+				FD379C051F5A211100231AD0 /* GrapeTableView.swift */,
+				FD379C071F5A2FA800231AD0 /* SelectedGrapeTableView.swift */,
 				FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */,
 				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
 				FD3122841F54EC1800EC8AE0 /* TastingNotesMOC.swift */,
@@ -202,10 +208,10 @@
 				FDC182AA1F34114000FB0E6C /* Info.plist */,
 				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
 				FD31228A1F5640C900EC8AE0 /* Grapes.csv */,
-				FDB868241F41F04100FF18EB /* TastingSession+CoreDataProperties.swift */,
+				FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */,
 				FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */,
-				FDB8682F1F41FA5600FF18EB /* Grapes+CoreDataProperties.swift */,
 				FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */,
+				FD379C151F5E090900231AD0 /* Grapes+CoreDataProperties.swift */,
 				FDC182A21F34114000FB0E6C /* TastingNotes.xcdatamodeld */,
 			);
 			path = TastingNotes;
@@ -548,24 +554,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */,
+				FD379C061F5A211100231AD0 /* GrapeTableView.swift in Sources */,
 				FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */,
 				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
 				FD3122891F55AC9500EC8AE0 /* Store.swift in Sources */,
-				FDB868311F41FA5600FF18EB /* Grapes+CoreDataProperties.swift in Sources */,
 				FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */,
 				FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
 				FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */,
+				FD379C081F5A2FA800231AD0 /* SelectedGrapeTableView.swift in Sources */,
 				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
 				FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */,
 				FD3122851F54EC1800EC8AE0 /* TastingNotesMOC.swift in Sources */,
 				FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */,
-				FDB868271F41F04100FF18EB /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDBEE4E11F478988002AFD2B /* Constants.swift in Sources */,
+				FD379C141F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDBEE4E51F4A271E002AFD2B /* ShowRatingTVC.swift in Sources */,
 				FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */,
 				FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */,
 				FD31228F1F59A00000EC8AE0 /* GrapeVC.swift in Sources */,
+				FD379C161F5E090900231AD0 /* Grapes+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,11 @@
 import UIKit
 import CoreData
 
-class GrapeVC: UIViewController,
-                UITableViewDelegate,
-                UITableViewDataSource {
+class GrapeVC: UIViewController {
     
     var grapeStore: GrapeStore!
+    var grapeTableView: GrapeTableView!
+    var selectedGrapeTableView: SelectedGrapeTableView!
     
     @IBAction func cancelGrapes(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -21,26 +21,13 @@ class GrapeVC: UIViewController,
     
     @IBOutlet var grapeTable: UITableView!
     
-    override func viewDidLoad() {
-        self.grapeTable.dataSource = self
-        self.grapeTable.delegate = self
-    }
+    @IBOutlet var selectedGrapesTable: UITableView!
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return grapeStore.count()
+    override func viewWillAppear(_ animated: Bool) {
+        grapeTable.delegate = grapeTableView
+        grapeTable.dataSource = grapeTableView
+        selectedGrapesTable.delegate = selectedGrapeTableView
+        selectedGrapesTable.dataSource = selectedGrapeTableView
+        grapeTableView.selectedGrapeTable = selectedGrapesTable
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GrapeCell", for: indexPath)
-        let grape = grapeStore.frc.object(at: indexPath)
-        cell.textLabel?.text = grape.grape
-        
-        return cell
-    }
-
 }
