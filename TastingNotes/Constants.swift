@@ -13,6 +13,8 @@ let sectionTitles = ["Description", "Appearance", "Nose", "Taste", "Conclusion"]
 
 let rowHeight: CGFloat = 44
 
+let grapePopped = NSNotification.Name(rawValue: "GrapePopped")
+
 struct SectionHeader {
     static let color = "#e29b0d"
     static let textColor  = "#574852"

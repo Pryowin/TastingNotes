@@ -54,10 +54,10 @@ class GrapeStore: NSObject, Store {
         return isLinked
     }
     
-    func linkToNote(_ note: TastingNotes) {
+    func linkToNote(_ note: TastingNotes, percent: Int16) {
         let grape = self.frc.object(at: self.selectedRecord)
         let percentage = Percentages.init(entity: NSEntityDescription.entity(forEntityName: "Percentages", in: mananagedObjectContext)!, insertInto: mananagedObjectContext)
-        percentage.percentage = 0
+        percentage.percentage = percent
         percentage.grape = grape.grape
         grape.addToIsPresentAt(percentage)
         note.addToHasInIt(percentage)

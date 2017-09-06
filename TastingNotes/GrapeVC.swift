@@ -17,6 +17,7 @@ class GrapeVC: UIViewController {
     
     @IBAction func cancelGrapes(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        NotificationCenter.default.post(name: grapePopped, object: nil)
     }
     
     @IBOutlet var grapeTable: UITableView!
@@ -29,5 +30,7 @@ class GrapeVC: UIViewController {
         selectedGrapesTable.delegate = selectedGrapeTableView
         selectedGrapesTable.dataSource = selectedGrapeTableView
         grapeTableView.selectedGrapeTable = selectedGrapesTable
+        grapeTableView.activeViewController = self
+        selectedGrapeTableView.activeViewController = self
     }
 }

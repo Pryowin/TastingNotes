@@ -63,7 +63,32 @@ class TastingSessionStore: NSObject, Store {
         return self.note().hasInIt?.allObjects as! [Percentages]
     }
     func grapesForNote() -> [Percentages] {
-        return  self.note().hasInIt?.allObjects as! [Percentages]
+        let selectedGrapes =  self.note().hasInIt?.allObjects as! [Percentages]
+        return selectedGrapes.sorted {
+            if $0.percentage > $1.percentage {
+                return true
+            } else {
+                if $0.percentage < $1.percentage {
+                    return false
+                } else {
+                    if $0.grape! < $1.grape! {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+            }
+        }
+    }
+    
+    func total() -> Int16 {
+        
+        let selectedGrapes =  self.note().hasInIt?.allObjects as! [Percentages]
+        var sum: Int16 = 0
+        for grape in selectedGrapes {
+            sum  += grape.percentage
+        }
+        return sum
     }
     
     func recordToDelete() -> NSManagedObject! {

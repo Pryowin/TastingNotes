@@ -187,6 +187,7 @@
 		FDC1829A1F34113F00FB0E6C /* TastingNotes */ = {
 			isa = PBXGroup;
 			children = (
+				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
 				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
 				FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */,
 				FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */,
@@ -195,7 +196,6 @@
 				FD379C051F5A211100231AD0 /* GrapeTableView.swift */,
 				FD379C071F5A2FA800231AD0 /* SelectedGrapeTableView.swift */,
 				FDBEE4E41F4A271E002AFD2B /* ShowRatingTVC.swift */,
-				FDC1829F1F34114000FB0E6C /* Main.storyboard */,
 				FD3122841F54EC1800EC8AE0 /* TastingNotesMOC.swift */,
 				FD3122881F55AC9500EC8AE0 /* Store.swift */,
 				FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */,

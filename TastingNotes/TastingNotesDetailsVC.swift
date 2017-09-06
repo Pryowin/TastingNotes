@@ -36,6 +36,8 @@ class TastingNotesDetailsVC: UITableViewController {
     @IBOutlet var type: SearchTextField!
     @IBOutlet var price: UITextField!
     
+    @IBOutlet var grapeCount: UILabel!
+    
     @IBAction func priceEditingEnded(_ sender: Any) {
         let num = Decimal.init(string: price.text!) as NSNumber!
         price.text = currencyFormatter.string(from: num!)
@@ -134,6 +136,8 @@ class TastingNotesDetailsVC: UITableViewController {
         currencyFormatter = formatters.currencyFormatter
         backToNumberFormatter = formatters.backToNumberFormatter
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.recalcuateGrapes), name: grapePopped, object: nil)
+        
         if editMode {
             let notes = sessionStore.notes()
             let note = notes![sessionStore.selectedNote.row]
@@ -147,6 +151,8 @@ class TastingNotesDetailsVC: UITableViewController {
             type.text = note.type
             let priceString = currencyFormatter.string(from: note.price!)
             price.text = priceString
+            
+            recalcuateGrapes()
             
             appearanceColour.text = note.appearanceColour
             appearanceClarity.text = note.appearanceClarity
@@ -245,6 +251,14 @@ class TastingNotesDetailsVC: UITableViewController {
             selectedGrapeTableView.grapeStore = self.grapeStore
         default:
              preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
+        }
+    }
+    
+    func recalcuateGrapes() {
+        if sessionStore.grapesForNote().count > 0 {
+            grapeCount.text = String(sessionStore.grapesForNote().count)
+        } else {
+            grapeCount.text = ""
         }
     }
     
