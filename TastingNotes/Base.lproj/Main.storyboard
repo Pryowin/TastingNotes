@@ -1146,9 +1146,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Nv-di-oTA" secondAttribute="height" multiplier="125:154" id="P1z-9j-2Jm"/>
                                 </constraints>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Grape" showsCancelButton="YES" id="c4B-Mq-QTK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GrapeCell" textLabel="6Jp-Xr-B83" style="IBUITableViewCellStyleDefault" id="9OU-5i-1dY">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9OU-5i-1dY" id="tik-L1-x8x">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -1218,6 +1223,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="grapeSearch" destination="c4B-Mq-QTK" id="y40-rt-Yen"/>
                         <outlet property="grapeTable" destination="2Nv-di-oTA" id="KFA-CG-TXq"/>
                         <outlet property="selectedGrapesTable" destination="cXu-mO-2OH" id="P6c-fw-IQW"/>
                     </connections>

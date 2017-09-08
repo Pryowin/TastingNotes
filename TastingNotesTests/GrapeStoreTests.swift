@@ -27,4 +27,22 @@ extension TastingNotesTests {
         grapeStore.importCSV()
         XCTAssertGreaterThan(grapeStore.count(), 100)
     }
+    func testFIlterGrapes() {
+        grapeStore.importCSV()
+        let pinotCount = grapeStore.returnFilteredSet("Pinot").count
+        XCTAssertLessThan(pinotCount, 5)
+        XCTAssertGreaterThan(pinotCount, 0)
+        
+    }
+    func testLinkToNote() {
+        addGrapes()
+        grapeStore.selectedRecord = IndexPath.init(row:0, section: 0)
+        saveSession()
+        let note = sessionStore.newNote()
+        note.wineName = "Wine Name"
+        sessionStore.addToNotes(note)
+        XCTAssertFalse(grapeStore.isLinkedToNote(note))
+        grapeStore.linkToNote(note, percent: 10)
+        XCTAssert(grapeStore.isLinkedToNote(note))
+    }
 }

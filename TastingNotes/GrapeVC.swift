@@ -24,6 +24,8 @@ class GrapeVC: UIViewController {
     
     @IBOutlet var selectedGrapesTable: UITableView!
     
+    @IBOutlet var grapeSearch: UISearchBar!
+    
     override func viewWillAppear(_ animated: Bool) {
         grapeTable.delegate = grapeTableView
         grapeTable.dataSource = grapeTableView
@@ -32,5 +34,7 @@ class GrapeVC: UIViewController {
         grapeTableView.selectedGrapeTable = selectedGrapesTable
         grapeTableView.activeViewController = self
         selectedGrapeTableView.activeViewController = self
+        grapeSearch.delegate = grapeTableView
+        grapeTableView.grapeTable = grapeTable
     }
 }

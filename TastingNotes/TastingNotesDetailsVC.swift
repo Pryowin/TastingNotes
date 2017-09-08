@@ -82,13 +82,20 @@ class TastingNotesDetailsVC: UITableViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    // MARK: - Functions
+    
     func pressed(sender: UIButton!) {
         let section = sender.tag
         sectionShows[section] = !sectionShows[section]
         self.tableView.reloadData()
     }
     
-    // MARK: - Functions
+    func recalcuateGrapes() {
+        
+        let countOfGrapes = sessionStore.grapesForNote().count
+        grapeCount.text = countOfGrapes > 0 ? String(countOfGrapes) : ""
+    }
+    
     func saveFields(_ note: TastingNotes) {
         note.wineName = wineName.text
         if let vintage = Int16(year.text!) {
@@ -235,6 +242,7 @@ class TastingNotesDetailsVC: UITableViewController {
        
         self.tableView.reloadData()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navController = segue.destination as! UINavigationController
         switch segue.identifier {
@@ -254,14 +262,6 @@ class TastingNotesDetailsVC: UITableViewController {
         }
     }
     
-    func recalcuateGrapes() {
-        if sessionStore.grapesForNote().count > 0 {
-            grapeCount.text = String(sessionStore.grapesForNote().count)
-        } else {
-            grapeCount.text = ""
-        }
-    }
-    
     // MARK: - Autocomplete functions
     func configureSearchField(_ field: SearchTextField) {
         let fieldName = field.accessibilityIdentifier!
@@ -273,5 +273,4 @@ class TastingNotesDetailsVC: UITableViewController {
             print("\(#function): Unknown Autocomplete key \(fieldName)")
         }
     }
-    
 }

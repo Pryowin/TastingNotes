@@ -41,6 +41,24 @@ class GrapeStore: NSObject, Store {
     func recordToDelete() -> NSManagedObject! {
         return self.frc.object(at: self.selectedRecord) as NSManagedObject!
     }
+    func returnFilteredSet(_ filter: String) -> [NSFetchRequestResult] {
+        
+        let request: NSFetchRequest<Grapes> = Grapes.fetchRequest()
+        let commonSort = NSSortDescriptor(key: "common", ascending: false)
+        let nameSort = NSSortDescriptor(key: "grape", ascending: true)
+        request.sortDescriptors = [commonSort, nameSort]
+        let predicate = NSPredicate(format: "grape BEGINSWITH %@", filter)
+        request.predicate = predicate
+        
+        let filteredfrc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: mananagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        do {
+            try filteredfrc.performFetch()
+        } catch {
+            print("Failed to init FetchedResultsController: \(error)")
+        }
+        return filteredfrc.fetchedObjects!
+    }
     
     func isLinkedToNote(_ note: TastingNotes) -> Bool {
         var isLinked: Bool = false
