@@ -10,6 +10,9 @@
 		220DFFD2261C1A85AB3F1EB3 /* Pods_TastingNotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */; };
 		9BB37AF3AC096F7297E09DCC /* Pods_TastingNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D0BACC200476B554AB5F14 /* Pods_TastingNotesTests.framework */; };
 		B43E8C6846B1B1F355031E31 /* Pods_TastingNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFEBCD83ABC9B40B8DEC7BA /* Pods_TastingNotes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FD0AB3E21F62CE15005D2C4D /* FourSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AB3E11F62CE15005D2C4D /* FourSquare.swift */; };
+		FD0AB3E41F62D79B005D2C4D /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD0AB3E31F62D79B005D2C4D /* configuration.plist */; };
+		FD0AB3E81F62F58E005D2C4D /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AB3E71F62F58E005D2C4D /* FourSquareTests.swift */; };
 		FD3122811F536A1900EC8AE0 /* TastingSessionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */; };
 		FD3122831F5372BC00EC8AE0 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3122821F5372BC00EC8AE0 /* TestHelper.swift */; };
 		FD3122851F54EC1800EC8AE0 /* TastingNotesMOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3122841F54EC1800EC8AE0 /* TastingNotesMOC.swift */; };
@@ -41,6 +44,7 @@
 		FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */; };
 		FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */; };
 		FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */; };
+		FDCA8A701F676877005CDF4B /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */; };
 		FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD668D71F4FC280000CE92F /* GrapeStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,9 @@
 		E96859A1B3B14A3F14AB0698 /* Pods-TastingNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TastingNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-TastingNotes/Pods-TastingNotes.release.xcconfig"; sourceTree = "<group>"; };
 		F641844D04BD7842798C640F /* Pods-TastingNotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TastingNotesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TastingNotesUITests/Pods-TastingNotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6D0BACC200476B554AB5F14 /* Pods_TastingNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0AB3E11F62CE15005D2C4D /* FourSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquare.swift; sourceTree = "<group>"; };
+		FD0AB3E31F62D79B005D2C4D /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
+		FD0AB3E71F62F58E005D2C4D /* FourSquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareTests.swift; sourceTree = "<group>"; };
 		FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStoreTests.swift; sourceTree = "<group>"; };
 		FD3122821F5372BC00EC8AE0 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		FD3122841F54EC1800EC8AE0 /* TastingNotesMOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingNotesMOC.swift; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 		FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNotesUITests.swift; sourceTree = "<group>"; };
 		FDC182C01F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		FDD668D71F4FC280000CE92F /* GrapeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeStore.swift; sourceTree = "<group>"; };
 		FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +199,7 @@
 				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
 				FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */,
 				FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */,
+				FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */,
 				FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */,
 				FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */,
 				FD379C051F5A211100231AD0 /* GrapeTableView.swift */,
@@ -200,12 +209,14 @@
 				FD3122881F55AC9500EC8AE0 /* Store.swift */,
 				FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */,
 				FDD668D71F4FC280000CE92F /* GrapeStore.swift */,
+				FD0AB3E11F62CE15005D2C4D /* FourSquare.swift */,
 				FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */,
 				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */,
 				FDBEE4E01F478988002AFD2B /* Constants.swift */,
 				FDC182A71F34114000FB0E6C /* LaunchScreen.storyboard */,
 				FDC182AA1F34114000FB0E6C /* Info.plist */,
+				FD0AB3E31F62D79B005D2C4D /* configuration.plist */,
 				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
 				FD31228A1F5640C900EC8AE0 /* Grapes.csv */,
 				FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */,
@@ -223,6 +234,7 @@
 				FDC182B31F34114000FB0E6C /* TastingNotesTests.swift */,
 				FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */,
 				FD31228C1F56FDD000EC8AE0 /* GrapeStoreTests.swift */,
+				FD0AB3E71F62F58E005D2C4D /* FourSquareTests.swift */,
 				FD3122821F5372BC00EC8AE0 /* TestHelper.swift */,
 				FDC182B51F34114000FB0E6C /* Info.plist */,
 			);
@@ -359,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC182A91F34114000FB0E6C /* LaunchScreen.storyboard in Resources */,
+				FD0AB3E41F62D79B005D2C4D /* configuration.plist in Resources */,
 				FDC182A61F34114000FB0E6C /* Assets.xcassets in Resources */,
 				FD31228B1F5640C900EC8AE0 /* Grapes.csv in Resources */,
 				FDC182A11F34114000FB0E6C /* Main.storyboard in Resources */,
@@ -391,12 +404,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TastingNotes/Pods-TastingNotes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework",
 				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoursquareAPIClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,10 +570,12 @@
 			files = (
 				FDC182A41F34114000FB0E6C /* TastingNotes.xcdatamodeld in Sources */,
 				FD379C061F5A211100231AD0 /* GrapeTableView.swift in Sources */,
+				FDCA8A701F676877005CDF4B /* VenueViewController.swift in Sources */,
 				FDC1829E1F34114000FB0E6C /* TastingSessionsVC.swift in Sources */,
 				FDC1829C1F34114000FB0E6C /* AppDelegate.swift in Sources */,
 				FD3122891F55AC9500EC8AE0 /* Store.swift in Sources */,
 				FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */,
+				FD0AB3E21F62CE15005D2C4D /* FourSquare.swift in Sources */,
 				FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
 				FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */,
@@ -581,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0AB3E81F62F58E005D2C4D /* FourSquareTests.swift in Sources */,
 				FD3122831F5372BC00EC8AE0 /* TestHelper.swift in Sources */,
 				FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */,
 				FD3122811F536A1900EC8AE0 /* TastingSessionStoreTests.swift in Sources */,

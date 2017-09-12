@@ -9,6 +9,7 @@ target 'TastingNotes' do
   pod "SearchTextField"
   pod "Cosmos", '~> 11.0'
   pod 'CSV.swift', '~> 2.0'
+  pod 'FoursquareAPIClient'
 
   target 'TastingNotesTests' do
     inherit! :search_paths

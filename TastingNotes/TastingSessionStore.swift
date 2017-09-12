@@ -14,6 +14,7 @@ class TastingSessionStore: NSObject, Store {
     var frc: NSFetchedResultsController<TastingSession>
     var selectedRecord: IndexPath
     var selectedNote: IndexPath
+    var fourSquareLocation: String!
     
     init(usingManagedObjectContext moc: NSManagedObjectContext) {
             

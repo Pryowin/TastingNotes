@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FoursquareAPIClient
 
 class TastingSessionDetailsVC: UIViewController,
                                 UITextFieldDelegate,
@@ -21,6 +22,7 @@ class TastingSessionDetailsVC: UIViewController,
     var grapeStore: GrapeStore!
     var dateFormatter: DateFormatter!
     var dateCreated: NSDate!
+    var venues: [String]!
     
     let segueName = "showNoteDetails"
  
@@ -54,6 +56,25 @@ class TastingSessionDetailsVC: UIViewController,
         }
     }
     
+    @IBOutlet var activitySpinner: UIActivityIndicatorView!
+    
+    @IBAction func findLocation(_ sender: Any) {
+        activitySpinner.hidesWhenStopped = true
+        activitySpinner.isHidden = false
+        activitySpinner.startAnimating()
+        let connection = FourSquareConnection()
+        connection.getVeunues(lat: 38.344957, long: -122.2837754, limit: 5) { () -> Void in
+            self.activitySpinner.stopAnimating()
+            if  connection.gotVenues {
+                self.venues = connection.returnVenues()
+                self.performSegue(withIdentifier: "showVenues", sender: sender)
+            } else {
+                print(connection.errorResponse)
+            }
+            
+        }
+    }
+    
     @IBAction func addNotes(_ sender: UIButton) {
         performSegue(withIdentifier: segueName, sender: sender)
     }
@@ -79,6 +100,8 @@ class TastingSessionDetailsVC: UIViewController,
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showVenues), name: venueSelected, object: nil)
         
         // Init fields based on editing mode
         if editMode {
@@ -106,6 +129,13 @@ class TastingSessionDetailsVC: UIViewController,
         view.endEditing(true)
     }
     
+    func showVenues() {
+        sessionLocation.text = sessionStore.fourSquareLocation
+        if sessionName.text == "" {
+            sessionName.text = sessionStore.fourSquareLocation
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navController = segue.destination as! UINavigationController
         switch segue.identifier {
@@ -118,6 +148,10 @@ class TastingSessionDetailsVC: UIViewController,
             } else {
                 sessionNotesController.editMode = true
             }
+            case "showVenues"?:
+                let venueController =  navController.topViewController as! VenueViewController
+                venueController.session = sessionStore
+                venueController.venueNames = venues
         default:
             preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
         }
