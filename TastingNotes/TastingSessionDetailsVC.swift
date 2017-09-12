@@ -59,19 +59,27 @@ class TastingSessionDetailsVC: UIViewController,
     @IBOutlet var activitySpinner: UIActivityIndicatorView!
     
     @IBAction func findLocation(_ sender: Any) {
-        activitySpinner.hidesWhenStopped = true
-        activitySpinner.isHidden = false
-        activitySpinner.startAnimating()
-        let connection = FourSquareConnection()
-        connection.getVeunues(lat: 38.344957, long: -122.2837754, limit: 5) { () -> Void in
-            self.activitySpinner.stopAnimating()
-            if  connection.gotVenues {
-                self.venues = connection.returnVenues()
-                self.performSegue(withIdentifier: "showVenues", sender: sender)
-            } else {
-                print(connection.errorResponse)
+        let location = Location()
+        if location.found {
+            activitySpinner.hidesWhenStopped = true
+            activitySpinner.isHidden = false
+            activitySpinner.startAnimating()
+            let connection = FourSquareConnection()
+            connection.getVeunues(lat: location.lat, long: location.long, limit: 5) { () -> Void in
+                self.activitySpinner.stopAnimating()
+                if  connection.gotVenues {
+                    self.venues = connection.returnVenues()
+                    self.performSegue(withIdentifier: "showVenues", sender: sender)
+                } else {
+                    print(connection.errorResponse)
+                }
             }
-            
+        }
+        if !location.auth {
+            print("User has not authorized location services")
+        }
+        if location.auth && !location.found {
+            print("Unable to find location")
         }
     }
     

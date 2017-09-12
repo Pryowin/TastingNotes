@@ -45,6 +45,7 @@
 		FDC182BF1F34114000FB0E6C /* TastingNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182BE1F34114000FB0E6C /* TastingNotesUITests.swift */; };
 		FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */; };
 		FDCA8A701F676877005CDF4B /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */; };
+		FDCA8A721F68986C005CDF4B /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8A711F68986C005CDF4B /* GetLocation.swift */; };
 		FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD668D71F4FC280000CE92F /* GrapeStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		FDC182C01F34114000FB0E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		FDCA8A711F68986C005CDF4B /* GetLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
 		FDD668D71F4FC280000CE92F /* GrapeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeStore.swift; sourceTree = "<group>"; };
 		FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 				FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */,
 				FDD668D71F4FC280000CE92F /* GrapeStore.swift */,
 				FD0AB3E11F62CE15005D2C4D /* FourSquare.swift */,
+				FDCA8A711F68986C005CDF4B /* GetLocation.swift */,
 				FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */,
 				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */,
@@ -589,6 +592,7 @@
 				FDBEE4E51F4A271E002AFD2B /* ShowRatingTVC.swift in Sources */,
 				FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */,
 				FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */,
+				FDCA8A721F68986C005CDF4B /* GetLocation.swift in Sources */,
 				FD31228F1F59A00000EC8AE0 /* GrapeVC.swift in Sources */,
 				FD379C161F5E090900231AD0 /* Grapes+CoreDataProperties.swift in Sources */,
 			);
