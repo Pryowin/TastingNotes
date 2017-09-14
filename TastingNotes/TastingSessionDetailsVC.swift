@@ -61,25 +61,16 @@ class TastingSessionDetailsVC: UIViewController,
     @IBAction func findLocation(_ sender: Any) {
         let location = Location()
         if location.found {
-            activitySpinner.hidesWhenStopped = true
-            activitySpinner.isHidden = false
-            activitySpinner.startAnimating()
-            let connection = FourSquareConnection()
-            connection.getVeunues(lat: location.lat, long: location.long, limit: 5) { () -> Void in
-                self.activitySpinner.stopAnimating()
-                if  connection.gotVenues {
-                    self.venues = connection.returnVenues()
-                    self.performSegue(withIdentifier: "showVenues", sender: sender)
-                } else {
-                    print(connection.errorResponse)
-                }
-            }
+            checkFoursquare(location)
         }
         if !location.auth {
-            print("User has not authorized location services")
+           askForLocationAuth()
         }
         if location.auth && !location.found {
-            print("Unable to find location")
+            let alertController  = UIAlertController(title: "Location Error", message: "Unable to find location", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -89,7 +80,7 @@ class TastingSessionDetailsVC: UIViewController,
    
     @IBOutlet var tableView: UITableView!
    
-     // MARK: - Functions
+     // MARK: - Override View Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,6 +135,34 @@ class TastingSessionDetailsVC: UIViewController,
         }
     }
     
+    func checkFoursquare(_ location: Location) {
+        activitySpinner.hidesWhenStopped = true
+        activitySpinner.isHidden = false
+        activitySpinner.startAnimating()
+        let connection = FourSquareConnection()
+        connection.getVeunues(lat: location.lat, long: location.long, limit: 5) { () -> Void in
+            self.activitySpinner.stopAnimating()
+            if  connection.gotVenues {
+                self.venues = connection.returnVenues()
+                self.performSegue(withIdentifier: "showVenues", sender: nil)
+            } else {
+                print(connection.errorResponse)
+            }
+        }
+    }
+    func askForLocationAuth () {
+        let alertController = UIAlertController(title: "Location Service Authorization Error", message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let openSettings = UIAlertAction(title: "Open Setings", style: .default) { _ -> Void in
+            if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(openSettings)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navController = segue.destination as! UINavigationController
         switch segue.identifier {
@@ -164,7 +183,6 @@ class TastingSessionDetailsVC: UIViewController,
             preconditionFailure("Unexpected Segue \(String(describing: segue.identifier))")
         }
     }
-    
     // MARK: - Data Source functions
     
     func numberOfSections(in tableView: UITableView) -> Int {
