@@ -351,15 +351,18 @@
 					FDC182971F34113F00FB0E6C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6HF44773WT;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					FDC182AE1F34114000FB0E6C = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FDC182971F34113F00FB0E6C;
 					};
 					FDC182B91F34114000FB0E6C = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FDC182971F34113F00FB0E6C;
 					};

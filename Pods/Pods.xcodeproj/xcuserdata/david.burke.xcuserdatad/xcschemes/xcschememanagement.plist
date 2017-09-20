@@ -8,89 +8,39 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Cosmos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>FoursquareAPIClient.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-TastingNotes.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-TastingNotesTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Pods-TastingNotesUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>SearchTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>23E38575B929CFB3EFA9D26E9F71350C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4710D1A59B3FF3CF67BA72ABA2EF565F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4CFFFF3B6C2A7810CF03036CD3493769</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4FDC533A4360A68ABDCE852F04B30927</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>701D4F02FAA85F5DE4F688FC7C082624</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BBAD9C940D90DA816C537A060D241585</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BD0496A78B2ADC210945C4F566AD313C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

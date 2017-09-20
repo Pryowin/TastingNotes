@@ -72,7 +72,7 @@ open class SearchTextField: UITextField {
     open var itemSelectionHandler: SearchTextFieldItemHandler?
     
     /// Closure to handle when the user stops typing
-    open var userStoppedTypingHandler: ((Void) -> Void)?
+    open var userStoppedTypingHandler: (() -> Void)?
     
     /// Set your custom set of attributes in order to highlight the string found in each item
     open var highlightAttributes: [String: AnyObject] = [NSFontAttributeName:UIFont.boldSystemFont(ofSize: 10)]
@@ -418,7 +418,7 @@ open class SearchTextField: UITextField {
         
         for i in 0 ..< filterDataSource.count {
             
-            var item = filterDataSource[i]
+            let item = filterDataSource[i]
             
             if !inlineMode {
                 // Find text in title and subtitle
@@ -615,7 +615,7 @@ public struct SearchTextFieldTheme {
 ////////////////////////////////////////////////////////////////////////
 // Filter Item
 
-public struct SearchTextFieldItem {
+open class SearchTextFieldItem {
     // Private vars
     fileprivate var attributedTitle: NSMutableAttributedString?
     fileprivate var attributedSubtitle: NSMutableAttributedString?
