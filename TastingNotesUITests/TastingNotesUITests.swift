@@ -35,14 +35,14 @@ class TastingNotesUITests: XCTestCase {
     func testTastingSessions() {
         
         // Verify correct screen at app start up
-        XCTAssert(app.staticTexts["Tasting Sessions"].exists)
+        XCTAssert(app.navigationBars["Tasting Sessions"].exists)
         XCTAssert(app.buttons["Add"].exists)
         XCTAssertEqual(rowCount(), 0)
         
     }
     func testAddButtonSegueCorrect () {
         app.buttons["Add"].tap()
-        XCTAssert(app.staticTexts["Add New Session"].exists)
+        XCTAssert(app.navigationBars["Add New Session"].exists)
         XCTAssert(app.buttons["Cancel"].exists)
         XCTAssert(app.buttons["Save"].exists)
         XCTAssert(app.staticTexts["Session Name:"].exists)
@@ -55,12 +55,11 @@ class TastingNotesUITests: XCTestCase {
     func testAddSession () {
         XCTAssertEqual(rowCount(), 0)
         addSession()
+        XCTAssert(app.navigationBars["Edit Session Details"].exists)
         app.buttons["Save"].tap()
-        
         XCTAssertEqual(rowCount(), 1)
         XCTAssert(app.tables.element(boundBy: 0).cells.staticTexts["Session"].exists)
         app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["Session"].tap()
-        XCTAssert(app.staticTexts["Edit Session Details"].exists)
         XCTAssert((app.buttons[addNotesButton].isEnabled == true))
         
     }
@@ -80,7 +79,6 @@ class TastingNotesUITests: XCTestCase {
         
         XCTAssert(app.buttons["Cancel"].exists)
         XCTAssert(app.buttons["Save"].exists)
-        XCTAssert(app.staticTexts["Tasting Notes"].exists)
         
         XCTAssert(app.textFields[TextField.wine].exists)
         XCTAssert(app.textFields[TextField.year].exists)

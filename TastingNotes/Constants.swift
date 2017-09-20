@@ -13,6 +13,10 @@ let sectionTitles = ["Description", "Appearance", "Nose", "Taste", "Conclusion"]
 
 let rowHeight: CGFloat = 44
 
+let numberOfVenuesReturned: Int = 5
+let tastingSessionsEditModeTitle = "Edit Session Details"
+let tastingSessionsAddModeTitle = "Add New Session"
+
 let grapePopped = NSNotification.Name(rawValue: "GrapePopped")
 let venueSelected = NSNotification.Name(rawValue: "VenueSelected")
 

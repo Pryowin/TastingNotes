@@ -51,6 +51,7 @@ class TastingSessionDetailsVC: UIViewController,
             addSession.sessionLocation = sessionLocation.text
             sessionStore.save()
             editMode = true
+            self.title = tastingSessionsEditModeTitle
             addNotes.isEnabled = true
         }
     }
@@ -103,14 +104,14 @@ class TastingSessionDetailsVC: UIViewController,
         
         // Init fields based on editing mode
         if editMode {
-            self.title = "Edit Session Details"
+            self.title = tastingSessionsEditModeTitle
             let session = sessionStore.frc.object(at: sessionStore.selectedRecord)
             sessionName.text = session.sessionName
             sessionLocation.text = session.sessionLocation
             addNotes.isEnabled = true
         } else {
             dateCreated = Date() as NSDate
-            self.title = "Add New Session"
+            self.title = tastingSessionsAddModeTitle
             addNotes.isEnabled = false
         }
     }
@@ -139,7 +140,7 @@ class TastingSessionDetailsVC: UIViewController,
         activitySpinner.isHidden = false
         activitySpinner.startAnimating()
         let connection = FourSquareConnection()
-        connection.getVeunues(lat: location.lat, long: location.long, limit: 5) { () -> Void in
+        connection.getVeunues(lat: location.lat, long: location.long, limit: numberOfVenuesReturned) { () -> Void in
             self.activitySpinner.stopAnimating()
             if  connection.gotVenues {
                 self.venues = connection.returnVenues()

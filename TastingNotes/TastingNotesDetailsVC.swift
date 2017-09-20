@@ -72,16 +72,19 @@ class TastingNotesDetailsVC: UITableViewController {
         if editMode {
             let note = sessionStore.note()
             saveFields(note)
+            sessionStore.save()
+            dismiss(animated: true, completion: nil)
         } else {
             let note = sessionStore.newNote()
             saveFields(note)
             sessionStore.addToNotes(note)
         }
-        
         sessionStore.save()
         dismiss(animated: true, completion: nil)
-        
     }
+    
+    @IBOutlet var grapes: UIButton!
+    
     // MARK: - Functions
     
     func pressed(sender: UIButton!) {
@@ -144,6 +147,9 @@ class TastingNotesDetailsVC: UITableViewController {
         backToNumberFormatter = formatters.backToNumberFormatter
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.recalcuateGrapes), name: grapePopped, object: nil)
+        
+        grapeCount.isHidden = !editMode
+        grapes.isHidden = !editMode
         
         if editMode {
             let notes = sessionStore.notes()
