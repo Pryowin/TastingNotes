@@ -28,7 +28,7 @@
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */; };
 		FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */; };
-		FD84DFA21F6A0CB900ED0FF7 /* Share Tasting Notes.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD84DF981F6A0CB900ED0FF7 /* Share Tasting Notes.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD84DFA81F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84DFA71F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift */; };
 		FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */; };
 		FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */; };
 		FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */; };
@@ -51,13 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD84DFA01F6A0CB900ED0FF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FDC182901F34113F00FB0E6C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD84DF971F6A0CB900ED0FF7;
-			remoteInfo = "Share Tasting Notes";
-		};
 		FDC182B01F34114000FB0E6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FDC182901F34113F00FB0E6C /* Project object */;
@@ -81,7 +74,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FD84DFA21F6A0CB900ED0FF7 /* Share Tasting Notes.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +107,7 @@
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsVC.swift; sourceTree = "<group>"; };
 		FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		FD84DF981F6A0CB900ED0FF7 /* Share Tasting Notes.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Share Tasting Notes.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD84DFA71F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsDataDelegate.swift; sourceTree = "<group>"; };
 		FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
 		FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingNotesDetailsVC.swift; sourceTree = "<group>"; };
 		FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -145,13 +137,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FD84DF951F6A0CB900ED0FF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDC182951F34113F00FB0E6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +205,6 @@
 				FDC182981F34113F00FB0E6C /* TastingNotes.app */,
 				FDC182AF1F34114000FB0E6C /* TastingNotesTests.xctest */,
 				FDC182BA1F34114000FB0E6C /* TastingNotesUITests.xctest */,
-				FD84DF981F6A0CB900ED0FF7 /* Share Tasting Notes.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +216,7 @@
 				FDC1829B1F34114000FB0E6C /* AppDelegate.swift */,
 				FDC1829D1F34114000FB0E6C /* TastingSessionsVC.swift */,
 				FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */,
+				FD84DFA71F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift */,
 				FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */,
 				FDA8BF1F1F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift */,
 				FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */,
@@ -289,23 +274,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD84DF971F6A0CB900ED0FF7 /* Share Tasting Notes */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FD84DFA51F6A0CBA00ED0FF7 /* Build configuration list for PBXNativeTarget "Share Tasting Notes" */;
-			buildPhases = (
-				FD84DF941F6A0CB900ED0FF7 /* Sources */,
-				FD84DF951F6A0CB900ED0FF7 /* Frameworks */,
-				FD84DF961F6A0CB900ED0FF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Share Tasting Notes";
-			productName = "Share Tasting Notes";
-			productReference = FD84DF981F6A0CB900ED0FF7 /* Share Tasting Notes.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		FDC182971F34113F00FB0E6C /* TastingNotes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDC182C31F34114000FB0E6C /* Build configuration list for PBXNativeTarget "TastingNotes" */;
@@ -322,7 +290,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD84DFA11F6A0CB900ED0FF7 /* PBXTargetDependency */,
 			);
 			name = TastingNotes;
 			productName = TastingNotes;
@@ -381,11 +348,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = amberfire;
 				TargetAttributes = {
-					FD84DF971F6A0CB900ED0FF7 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6HF44773WT;
-						ProvisioningStyle = Automatic;
-					};
 					FDC182971F34113F00FB0E6C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6HF44773WT;
@@ -419,19 +381,11 @@
 				FDC182971F34113F00FB0E6C /* TastingNotes */,
 				FDC182AE1F34114000FB0E6C /* TastingNotesTests */,
 				FDC182B91F34114000FB0E6C /* TastingNotesUITests */,
-				FD84DF971F6A0CB900ED0FF7 /* Share Tasting Notes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FD84DF961F6A0CB900ED0FF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDC182961F34113F00FB0E6C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,13 +584,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FD84DF941F6A0CB900ED0FF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FDC182941F34113F00FB0E6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -651,6 +598,7 @@
 				FD0AB3E21F62CE15005D2C4D /* FourSquare.swift in Sources */,
 				FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */,
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
+				FD84DFA81F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift in Sources */,
 				FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */,
 				FD379C081F5A2FA800231AD0 /* SelectedGrapeTableView.swift in Sources */,
 				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
@@ -693,11 +641,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FD84DFA11F6A0CB900ED0FF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FD84DF971F6A0CB900ED0FF7 /* Share Tasting Notes */;
-			targetProxy = FD84DFA01F6A0CB900ED0FF7 /* PBXContainerItemProxy */;
-		};
 		FDC182B11F34114000FB0E6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDC182971F34113F00FB0E6C /* TastingNotes */;
@@ -730,32 +673,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FD84DFA31F6A0CBA00ED0FF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 6HF44773WT;
-				INFOPLIST_FILE = "Share Tasting Notes/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amberfire.TastingNotes.Share-Tasting-Notes";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		FD84DFA41F6A0CBA00ED0FF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 6HF44773WT;
-				INFOPLIST_FILE = "Share Tasting Notes/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amberfire.TastingNotes.Share-Tasting-Notes";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		FDC182C11F34114000FB0E6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -803,6 +720,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -846,6 +764,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -940,14 +859,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD84DFA51F6A0CBA00ED0FF7 /* Build configuration list for PBXNativeTarget "Share Tasting Notes" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FD84DFA31F6A0CBA00ED0FF7 /* Debug */,
-				FD84DFA41F6A0CBA00ED0FF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		FDC182931F34113F00FB0E6C /* Build configuration list for PBXProject "TastingNotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
