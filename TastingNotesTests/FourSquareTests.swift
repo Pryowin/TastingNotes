@@ -22,7 +22,7 @@ extension TastingNotesTests {
             XCTAssertGreaterThan(venues.count, 0)
             foursquareExpectation.fulfill()
         }
-        waitForExpectations(timeout: 1) {error in
+        waitForExpectations(timeout: 5) {error in
             if let error = error {
                 XCTFail("Get Venue failed: \(error)")
             }

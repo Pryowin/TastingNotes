@@ -2,8 +2,9 @@
 //  TastingSession+CoreDataProperties.swift
 //  TastingNotes
 //
-//  Created by David Burke on 9/4/17.
+//  Created by David Burke on 9/28/17.
 //  Copyright © 2017 amberfire. All rights reserved.
+//
 //
 
 import Foundation

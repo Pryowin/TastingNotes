@@ -53,9 +53,9 @@ class TastingSessionStore: NSObject, Store {
     
     func notes() -> [TastingNotes]? {
         
-            return (self.frc.object(at: selectedRecord).notes!.allObjects as! [TastingNotes])
+        return self.frc.object(at: selectedRecord).notes!.sortedArray(using: [NSSortDescriptor(key: "dateCreated", ascending: true)]) as? [TastingNotes]
     }
-    
+
     func note() -> TastingNotes {
         return self.notes()![self.selectedNote.row]
     }

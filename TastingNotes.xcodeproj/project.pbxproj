@@ -22,7 +22,6 @@
 		FD31228F1F59A00000EC8AE0 /* GrapeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */; };
 		FD379C061F5A211100231AD0 /* GrapeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C051F5A211100231AD0 /* GrapeTableView.swift */; };
 		FD379C081F5A2FA800231AD0 /* SelectedGrapeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C071F5A2FA800231AD0 /* SelectedGrapeTableView.swift */; };
-		FD379C141F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */; };
 		FD379C161F5E090900231AD0 /* Grapes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD379C151F5E090900231AD0 /* Grapes+CoreDataProperties.swift */; };
 		FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */; };
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
@@ -47,6 +46,7 @@
 		FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */; };
 		FDCA8A701F676877005CDF4B /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */; };
 		FDCA8A721F68986C005CDF4B /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8A711F68986C005CDF4B /* GetLocation.swift */; };
+		FDCF31841F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF31831F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift */; };
 		FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD668D71F4FC280000CE92F /* GrapeStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +101,6 @@
 		FD31228E1F59A00000EC8AE0 /* GrapeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeVC.swift; sourceTree = "<group>"; };
 		FD379C051F5A211100231AD0 /* GrapeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeTableView.swift; sourceTree = "<group>"; };
 		FD379C071F5A2FA800231AD0 /* SelectedGrapeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedGrapeTableView.swift; sourceTree = "<group>"; };
-		FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD379C151F5E090900231AD0 /* Grapes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grapes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStore.swift; sourceTree = "<group>"; };
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FDCA8A6F1F676877005CDF4B /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		FDCA8A711F68986C005CDF4B /* GetLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
+		FDCF31831F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDD668D71F4FC280000CE92F /* GrapeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeStore.swift; sourceTree = "<group>"; };
 		FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -238,7 +238,7 @@
 				FD0AB3E31F62D79B005D2C4D /* configuration.plist */,
 				FDC182A51F34114000FB0E6C /* Assets.xcassets */,
 				FD31228A1F5640C900EC8AE0 /* Grapes.csv */,
-				FD379C121F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift */,
+				FDCF31831F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift */,
 				FDC182DE1F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift */,
 				FDB8682E1F41FA5600FF18EB /* Grapes+CoreDataClass.swift */,
 				FD379C151F5E090900231AD0 /* Grapes+CoreDataProperties.swift */,
@@ -603,13 +603,13 @@
 				FDC182E01F34CC8D00FB0E6C /* TastingSession+CoreDataClass.swift in Sources */,
 				FD84DFA81F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift in Sources */,
 				FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */,
+				FDCF31841F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift in Sources */,
 				FD379C081F5A2FA800231AD0 /* SelectedGrapeTableView.swift in Sources */,
 				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
 				FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */,
 				FD3122851F54EC1800EC8AE0 /* TastingNotesMOC.swift in Sources */,
 				FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */,
 				FDBEE4E11F478988002AFD2B /* Constants.swift in Sources */,
-				FD379C141F5DD32300231AD0 /* TastingSession+CoreDataProperties.swift in Sources */,
 				FDBEE4E51F4A271E002AFD2B /* ShowRatingTVC.swift in Sources */,
 				FDA8BF201F3BE7C700BEA5C8 /* TastingNotesDetailsVC.swift in Sources */,
 				FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */,

@@ -76,6 +76,7 @@ class TastingNotesDetailsVC: UITableViewController {
             dismiss(animated: true, completion: nil)
         } else {
             let note = sessionStore.newNote()
+            note.dateCreated = Date() as NSDate
             saveFields(note)
             sessionStore.addToNotes(note)
         }
