@@ -175,9 +175,36 @@ class TastingNotesUITests: XCTestCase {
         XCTAssertEqual(rowsBeforeDelete, expectedRowCount)
         
     }
-    func testSectionCollapse () {
+    func testGrapesButton () {
         addSession()
         addNotes()
-        
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts[wine].tap()
+        XCTAssert(app.buttons["Grapes"].isEnabled)
     }
+    func testNoGrapeButton () {
+        addSession()
+        app.buttons["Add Notes"].tap()
+        XCTAssertFalse(app.buttons["Grapes"].exists)
+    }
+    func testListGrapes () {
+        addSession()
+        addNotes()
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts[wine].tap()
+        app.buttons["Grapes"].tap()
+        XCTAssert(app.staticTexts["Barbera"].exists)
+        XCTAssert(app.staticTexts["Total:"].exists)
+        XCTAssert(app.staticTexts["0"].exists)
+    }
+    func testAddGrapes () {
+        addSession()
+        addNotes()
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts[wine].tap()
+        app.buttons["Grapes"].tap()
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["Barbera"].tap()
+        XCTAssert(app.alerts.staticTexts["Add Grape"].exists)
+        app.alerts.buttons["OK"].tap()
+        app.buttons["< Back"].tap()
+        XCTAssert(app.staticTexts["1"].exists)
+    }
+    //TODO: Add test where values entered in alert
 }
