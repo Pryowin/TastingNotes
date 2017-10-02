@@ -32,7 +32,7 @@ class FourSquareConnection: NSObject {
         }
     }
     
-    func getVeunues(lat: Double, long: Double, limit: Int, callback: @escaping () -> Void) {
+    func getVenues(lat: Double, long: Double, limit: Int, callback: @escaping () -> Void) {
         
         let parameter: [String: String] = [
             "ll": "\(lat),\(long)",

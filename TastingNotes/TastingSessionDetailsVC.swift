@@ -140,7 +140,7 @@ class TastingSessionDetailsVC: UIViewController,
         activitySpinner.isHidden = false
         activitySpinner.startAnimating()
         let connection = FourSquareConnection()
-        connection.getVeunues(lat: location.lat, long: location.long, limit: numberOfVenuesReturned) { () -> Void in
+        connection.getVenues(lat: location.lat, long: location.long, limit: numberOfVenuesReturned) { () -> Void in
             self.activitySpinner.stopAnimating()
             if  connection.gotVenues {
                 self.venues = connection.returnVenues()

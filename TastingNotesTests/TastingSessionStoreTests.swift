@@ -46,10 +46,18 @@ extension TastingNotesTests {
         let index = IndexPath.init(row: 0, section: 0)
         sessionStore.selectedRecord = index
         XCTAssertEqual(sessionStore.notes()?.count, 0)
-        let note = sessionStore.newNote()
+        var note = sessionStore.newNote()
         note.wineName = "Wine Name"
         sessionStore.addToNotes(note)
         XCTAssertEqual(sessionStore.notes()!.count, 1)
+        note = sessionStore.newNote()
+        note.wineName = "Wine Name 2"
+        sessionStore.addToNotes(note)
+        XCTAssertEqual(sessionStore.notes()!.count, 2)
+        note = sessionStore.notes()![0]
+        XCTAssertEqual(note.wineName, "Wine Name")
+        note = sessionStore.notes()![1]
+        XCTAssertEqual(note.wineName, "Wine Name 2")
     }
     func testDeleteNotes () {
         saveSession()
@@ -61,7 +69,6 @@ extension TastingNotesTests {
         let notes = sessionStore.notes()
         let index = IndexPath.init(row: 0, section: 0)
         let note = notes![index.row]
-        XCTAssertEqual(note.wineName, firstNoteName)
         session.removeFromNotes(note)
         XCTAssertEqual(sessionStore.notes()!.count, 1)
     }

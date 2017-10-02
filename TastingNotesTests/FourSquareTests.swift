@@ -16,7 +16,7 @@ extension TastingNotesTests {
         
         let foursquareExpectation = expectation(description: "Foursquare Responded")
         let connection = FourSquareConnection()
-        connection.getVeunues(lat: 38.344957, long: -122.2837754, limit: 5) { () -> Void in
+        connection.getVenues(lat: 38.344957, long: -122.2837754, limit: 5) { () -> Void in
             XCTAssertFalse(connection.response == nil)
             let venues = connection.returnVenues() 
             XCTAssertGreaterThan(venues.count, 0)
