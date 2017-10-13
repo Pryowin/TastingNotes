@@ -25,12 +25,17 @@ extension TastingNotesTests {
         sessionStore.selectedRecord = index
         let note = sessionStore.newNote()
         note.wineName = wineName
+        note.vintage = 1965
         sessionStore.addToNotes(note)
     }
     
     func addGrapes() {
-        let addGrapes = grapeStore.grapeToAdd()
+        var addGrapes = grapeStore.grapeToAdd()
         addGrapes.grape = "Pinot Noir"
+        addGrapes.type = "Red"
+        addGrapes.common = 1
+        addGrapes = grapeStore.grapeToAdd()
+        addGrapes.grape = "Barbera"
         addGrapes.type = "Red"
         addGrapes.common = 1
         grapeStore.save()

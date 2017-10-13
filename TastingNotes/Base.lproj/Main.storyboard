@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jt-Q3-AFP">
-                                <rect key="frame" x="24" y="96" width="122" height="21"/>
+                                <rect key="frame" x="24" y="76" width="122" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="122" id="GWp-wM-qhi"/>
                                     <constraint firstAttribute="height" constant="21" id="iIw-z3-nAg"/>
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdC-Mc-qcA">
-                                <rect key="frame" x="24" y="179" width="114" height="21"/>
+                                <rect key="frame" x="24" y="159" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UTl-hJ-zh8"/>
                                     <constraint firstAttribute="width" constant="114" id="khv-xP-825"/>
@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8rn-5T-eJS">
-                                <rect key="frame" x="24" y="129" width="327" height="30"/>
+                                <rect key="frame" x="24" y="109" width="327" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sessionName"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WnV-3Q-Fpr"/>
@@ -107,7 +107,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-SL-f00">
-                                <rect key="frame" x="24" y="208" width="327" height="30"/>
+                                <rect key="frame" x="24" y="188" width="327" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sessionLocation"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iha-zy-Zzp"/>
@@ -128,7 +128,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TUC-QJ-Or3">
-                                <rect key="frame" x="24" y="289" width="327" height="370"/>
+                                <rect key="frame" x="24" y="269" width="327" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" id="GUe-bV-oAM" customClass="ShowRatingTVC" customModule="TastingNotes" customModuleProvider="target">
@@ -181,7 +181,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWA-gR-oTf">
-                                <rect key="frame" x="279" y="251" width="72" height="30"/>
+                                <rect key="frame" x="279" y="231" width="72" height="30"/>
                                 <state key="normal" title="Add Notes"/>
                                 <connections>
                                     <action selector="addNotes:" destination="Ai3-CA-JcG" eventType="touchUpInside" id="3C3-Ox-GGI"/>
@@ -195,6 +195,17 @@
                                     <action selector="findLocation:" destination="Ai3-CA-JcG" eventType="touchUpInside" id="XFx-FO-Tyz"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ks1-Hy-oSU">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="dlh-Dd-Yf3">
+                                        <connections>
+                                            <action selector="share:" destination="Ai3-CA-JcG" id="jer-2O-Y05"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -221,6 +232,7 @@
                             <constraint firstItem="CJh-u1-pYn" firstAttribute="top" secondItem="TUC-QJ-Or3" secondAttribute="bottom" constant="8" id="vCN-i3-Z6i"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Session Details" id="r64-aQ-1vo">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="la0-T5-9IC">
                             <connections>
@@ -233,6 +245,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activitySpinner" destination="Rra-zw-9p0" id="eKk-j0-vw1"/>
                         <outlet property="addNotes" destination="fWA-gR-oTf" id="6Ps-6P-IHj"/>

@@ -26,6 +26,7 @@
 		FD39EDA41F37738B00FE50D3 /* TastingSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */; };
 		FD39EDA61F377CF900FE50D3 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA51F377CF900FE50D3 /* Formatters.swift */; };
 		FD39EDA81F37950A00FE50D3 /* TastingSessionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */; };
+		FD58F4EB1F8E6F2300BE9451 /* SaveDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58F4EA1F8E6F2300BE9451 /* SaveDictionary.swift */; };
 		FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */; };
 		FD84DFA81F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD84DFA71F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift */; };
 		FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */; };
@@ -48,6 +49,8 @@
 		FDCA8A721F68986C005CDF4B /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA8A711F68986C005CDF4B /* GetLocation.swift */; };
 		FDCF31841F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF31831F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift */; };
 		FDD668D81F4FC280000CE92F /* GrapeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD668D71F4FC280000CE92F /* GrapeStore.swift */; };
+		FDE5F1491F82662A00899347 /* ConvertToDictonary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5F1481F82662A00899347 /* ConvertToDictonary.swift */; };
+		FDE5F14B1F82690E00899347 /* SharingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE5F14A1F82690D00899347 /* SharingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,7 @@
 		FD39EDA31F37738B00FE50D3 /* TastingSessionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionStore.swift; sourceTree = "<group>"; };
 		FD39EDA51F377CF900FE50D3 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		FD39EDA71F37950A00FE50D3 /* TastingSessionDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsVC.swift; sourceTree = "<group>"; };
+		FD58F4EA1F8E6F2300BE9451 /* SaveDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDictionary.swift; sourceTree = "<group>"; };
 		FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FD84DFA71F6ABAD900ED0FF7 /* TastingSessionDetailsDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TastingSessionDetailsDataDelegate.swift; sourceTree = "<group>"; };
 		FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 		FDCA8A711F68986C005CDF4B /* GetLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
 		FDCF31831F7DD2CA00348CF3 /* TastingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TastingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDD668D71F4FC280000CE92F /* GrapeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrapeStore.swift; sourceTree = "<group>"; };
+		FDE5F1481F82662A00899347 /* ConvertToDictonary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToDictonary.swift; sourceTree = "<group>"; };
+		FDE5F14A1F82690D00899347 /* SharingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingTests.swift; sourceTree = "<group>"; };
 		FFE990EA2FDA0DBF35ED4663 /* Pods_TastingNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TastingNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -229,6 +235,8 @@
 				FDD668D71F4FC280000CE92F /* GrapeStore.swift */,
 				FD0AB3E11F62CE15005D2C4D /* FourSquare.swift */,
 				FDCA8A711F68986C005CDF4B /* GetLocation.swift */,
+				FDE5F1481F82662A00899347 /* ConvertToDictonary.swift */,
+				FD58F4EA1F8E6F2300BE9451 /* SaveDictionary.swift */,
 				FDA8BF1D1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift */,
 				FD39EDA51F377CF900FE50D3 /* Formatters.swift */,
 				FD633ADD1F3FAC2800B00D5F /* UIColorExtension.swift */,
@@ -254,6 +262,7 @@
 				FD3122801F536A1900EC8AE0 /* TastingSessionStoreTests.swift */,
 				FD31228C1F56FDD000EC8AE0 /* GrapeStoreTests.swift */,
 				FD0AB3E71F62F58E005D2C4D /* FourSquareTests.swift */,
+				FDE5F14A1F82690D00899347 /* SharingTests.swift */,
 				FD3122821F5372BC00EC8AE0 /* TestHelper.swift */,
 				FDC182B51F34114000FB0E6C /* Info.plist */,
 			);
@@ -607,6 +616,8 @@
 				FD379C081F5A2FA800231AD0 /* SelectedGrapeTableView.swift in Sources */,
 				FDA8BF1E1F3ABD1C00BEA5C8 /* FetchedResultsControllerDelegate.swift in Sources */,
 				FDB868301F41FA5600FF18EB /* Grapes+CoreDataClass.swift in Sources */,
+				FD58F4EB1F8E6F2300BE9451 /* SaveDictionary.swift in Sources */,
+				FDE5F1491F82662A00899347 /* ConvertToDictonary.swift in Sources */,
 				FD3122851F54EC1800EC8AE0 /* TastingNotesMOC.swift in Sources */,
 				FD633ADE1F3FAC2800B00D5F /* UIColorExtension.swift in Sources */,
 				FDBEE4E11F478988002AFD2B /* Constants.swift in Sources */,
@@ -623,6 +634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE5F14B1F82690E00899347 /* SharingTests.swift in Sources */,
 				FD0AB3E81F62F58E005D2C4D /* FourSquareTests.swift in Sources */,
 				FD3122831F5372BC00EC8AE0 /* TestHelper.swift in Sources */,
 				FDC182B41F34114000FB0E6C /* TastingNotesTests.swift in Sources */,

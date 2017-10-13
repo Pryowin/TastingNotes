@@ -206,5 +206,16 @@ class TastingNotesUITests: XCTestCase {
         app.buttons["< Back"].tap()
         XCTAssert(app.staticTexts["1"].exists)
     }
-    //TODO: Add test where values entered in alert
+    func testAddGrapesWithPercentage () {
+        addSession()
+        addNotes()
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts[wine].tap()
+        app.buttons["Grapes"].tap()
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["Barbera"].tap()
+        let textField = app.alerts.textFields.element
+        textField.tap()
+        textField.typeText(String(50))
+        app.alerts.buttons["OK"].tap()
+        XCTAssert(app.staticTexts["50"].exists)
+    }
 }

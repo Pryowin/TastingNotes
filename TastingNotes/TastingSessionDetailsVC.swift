@@ -78,6 +78,17 @@ class TastingSessionDetailsVC: UIViewController,
         performSegue(withIdentifier: segueName, sender: sender)
     }
    
+    @IBAction func share(_ sender: Any) {
+        let dict = sessionStore.convertSessionToDictionary()
+        if let fileURL = dict.exportToFileURL() {
+            let activityViewController = UIActivityViewController(activityItems: ["Tasting Session Notes", fileURL], applicationActivities: nil)
+            if let popoverPresentationController = activityViewController.popoverPresentationController {
+                popoverPresentationController.barButtonItem = (sender as! UIBarButtonItem)
+            }
+            present(activityViewController, animated: true, completion: nil)
+        }
+        
+    }
     @IBOutlet var tableView: UITableView!
    
      // MARK: - Override View Functions
