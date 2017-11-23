@@ -95,7 +95,7 @@ class GrapeTableView: NSObject, UITableViewDelegate, UITableViewDataSource,
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        searchActive = searchText.characters.count > 0 ? true : false
+        searchActive = searchText.count > 0 ? true : false
         
         filterString = searchText
         grapeTable.reloadData()

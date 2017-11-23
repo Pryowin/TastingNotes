@@ -14,13 +14,13 @@ extension TastingNotesTests {
     func testAddGrape() {
         XCTAssertEqual(grapeStore.count(), 0)
         addGrapes()
-        XCTAssertEqual(grapeStore.count(), 1)
+        XCTAssertEqual(grapeStore.count(), 2)
     }
     
     func testDeleteGrape() {
         addGrapes()
         grapeStore.delete()
-        XCTAssertEqual(grapeStore.count(), 0)
+        XCTAssertEqual(grapeStore.count(), 1)
     }
     
     func testLoadCSV() {

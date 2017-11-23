@@ -55,9 +55,9 @@ extension TastingNotesTests {
         sessionStore.addToNotes(note)
         XCTAssertEqual(sessionStore.notes()!.count, 2)
         note = sessionStore.notes()![0]
-        XCTAssertEqual(note.wineName, "Wine Name")
-        note = sessionStore.notes()![1]
         XCTAssertEqual(note.wineName, "Wine Name 2")
+        note = sessionStore.notes()![1]
+        XCTAssertEqual(note.wineName, "Wine Name")
     }
     func testDeleteNotes () {
         saveSession()
